@@ -1,0 +1,12 @@
+temp/
+__pycache__
+.idea
+.vscode
+results
+impl.py
+resources/cache.json
+.DS_Store
+temp/*
+!temp/impl.py
+results/naive/gpt4-0613/summarized_hypothesis/*
+!results/naive/gpt4-0613/summarized_hypothesis/vis/

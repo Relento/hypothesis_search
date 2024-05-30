@@ -1,0 +1,85 @@
+only_allow_cache: True
+use_azure_api: False
+azure:
+  openai_api_type: azure
+  openai_api_version: xxx
+  openai_api_base: xxx
+  openai_api_key: xxx
+
+openai_api_key: org-xxx:xxx
+dataset: larc
+larc_dataset_path: ../LARC/dataset
+larc_cache_path: resources/larc_cache.pkl
+arc1d_dataset_path: ../1D-ARC
+arc1d_cache_path: resources/arc1d_cache.pkl
+results_path: results
+only_load_success_task: False
+
+exp_name: naive
+split_path: resources/splits/random_100.json
+load_single_task: -1
+load_tasks: []
+num_examples: -1
+start_idx: 0
+num_completions: 8
+max_tokens: 1000
+add_hint: False
+# feedbacks
+num_feedbacks: 0
+feedback_describe_difference: False
+only_last_feedback: False
+feedback_show_grid_diff: False
+feedback_revise_language: False
+# should be set to true for new experiments
+parse_python_tag: False
+
+model_name: gpt-3.5-turbo-0301
+feedback_model_name: same
+visualize: False
+description_id_override_json: resources/description_id_override.json
+description_id_override: True
+description_select_by_heuristic: False
+description_only_transformation: False
+
+
+#program clustering
+program_clustering: False
+
+# hyperparameters
+temperature: 0.5
+
+#prompt
+example_side_by_side: False
+# ask GPT to generate the language before the program
+generate_language_before_program: False
+add_meta_hint: False
+generate_detailed_plan_and_tests: False
+
+use_web_ui: False
+
+directly_output_grid: False
+directly_output_grid_vote: False
+#ensure each number is tokenized in the same way
+add_space_first_number: False
+grid_value: number
+grid_style: numpy
+add_coordinate: False
+grid_array_type: list
+add_scipy_hint: False
+hint_may_be_wrong: False
+
+# for testing data contamination
+flip_grid: False
+
+use_generated_language: False
+language_generation:
+  model_name: gpt-4-0314
+  add_meta_hint: False
+  num_completions: 4
+  temperature: 0.7
+  example_dataset: larc
+  example_task_ids: [139]
+  max_tokens: 300
+  manually_select_file: ''
+  visualize_every_solution: True
+  read_from_file: ''

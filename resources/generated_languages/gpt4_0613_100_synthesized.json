@@ -1,0 +1,950 @@
+{
+  "0": [
+    "To create the output, scale up the input grid by a factor of 3, where each cell in the input grid corresponds to a 3x3 block in the output grid with the same color.",
+    "To create the output, repeat the input grid in a 3x3 pattern within the output grid, with each cell in the input grid corresponding to a 3x3 block in the output grid.",
+    "To create the output, create a mirrored or rotated version of the input grid within the output grid, with each cell in the input grid corresponding to a 3x3 block in the output grid.",
+    "To create the output, repeat the input grid in each quadrant of the output grid, with some modifications to the input grid being made before it is repeated.",
+    "To create the output, expand the input grid by repeating the rows and columns, with some cells in the output grid being replaced by black cells or cells from the input grid.",
+    "To create the output, create a 3x3 grid in the output for each cell in the input, with the placement of colors in the output grid being determined by the position of the cell in the input grid.",
+    "To create the output, create a 3x3 grid in the output for each cell in the input, with the color of the cells in the output grid being determined by the color of the corresponding cell in the input grid.",
+    "To create the output, create a 3x3 grid in the output for each cell in the input, with the color of the cells in the output grid being determined by the color and position of the cells in the input grid."
+  ],
+  "7": [
+    "To make the output, shift all colored shapes (red and teal) towards the center of the grid while maintaining their relative positions and orientations. The rest of the grid remains black.",
+    "To make the output, swap the positions of the red and teal shapes, maintaining their original structure and orientation. All other cells remain black.",
+    "To make the output, shift all colored shapes (red and teal) downwards until they reach another colored shape, the bottom of the grid, or a specified position. The rest of the grid remains black.",
+    "To make the output, shift all colored shapes (red and teal) upwards until they reach another colored shape, the top of the grid, or a specified position. The rest of the grid remains black.",
+    "To make the output, mirror the input along the horizontal axis in the middle, keeping the left-right orientation unaltered. The rest of the grid remains black.",
+    "To make the output, move the colored shapes so that they align with each other in the grid, maintaining their original structure and orientation. The rest of the grid remains black.",
+    "To make the output, shift all colored shapes (red and teal) from the upper half of the grid to the lower half, maintaining their relative positions and orientations. The rest of the grid remains black.",
+    "To make the output, shift all colored shapes (red and teal) from the lower half of the grid to the upper half, maintaining their relative positions and orientations. The rest of the grid remains black."
+  ],
+  "16": [
+    "Removal of Black Cells/Blocks and Restoration of Original Pattern: To transform the input grid into the output grid, identify and remove all black cells or blocks. Replace these with the original pattern that was disrupted, ensuring the pattern continues as if the black cells/blocks were never present.",
+    "Replacement of Black Cells with Preceding Pattern: To create the output, identify all black cells in the input grid. Replace these cells with the pattern that immediately precedes them in the same row or column. If the black cells are at the beginning, replace them with the pattern that follows.",
+    "Replacement of Black Cells with Surrounding Pattern: To generate the output, locate all black cells in the input grid. Replace these cells with the pattern that surrounds them, ensuring the pattern continues uninterrupted. If the surrounding patterns are different, use the pattern that comes before the black cells.",
+    "Replacement of Black Cells with Original Pattern Based on Position: To form the output, identify all black cells in the input grid. Replace these cells with the pattern that would have been in their position if the pattern had continued uninterrupted.",
+    "Replacement of Black Cells with Specific Pattern Based on Rule: To create the output, locate all black cells in the input grid. Replace these cells with a specific pattern based on a certain rule, such as the parity of the row number or the color of the diagonal stripe the cell would be part of.",
+    "Replacement of Black Cells with Original Pattern from Specific Direction: To generate the output, identify all black cells in the input grid. Replace these cells with the original pattern that comes from a specific direction, such as from the left, right, top, or bottom.",
+    "Replacement of Black Cells with Original Pattern Based on Size or Shape: To form the output, locate all black cells or blocks in the input grid. Replace these cells or blocks with the original pattern, taking into account the size or shape of the black cells or blocks.",
+    "Replacement of Black Cells with Original Pattern Based on Frequency or Value: To create the output, identify all black cells in the input grid. Replace these cells with the original pattern, considering the frequency or value of the numbers in the same row or column."
+  ],
+  "20": [
+    "To make the output, you have to count how many of each color are in the input. Then the output should be a grid filled with the color that appears the most in the input grid.",
+    "To make the output, you have to change the entire grid to the color of the first cell (top left corner) of the input grid. In other words, you should ignore the colored bands and consider only the first cell's color for the output.",
+    "To make the output, you need to divide the length of the input into equal thirds and take the middle third section. The height remains the same, so the entirety of the striped pattern remains.",
+    "The transformation involves compressing each 3x3 square grids (above and below yellow strip) into a one single cell, which retains the color of the majority pixels. If the majority pixels are green then the color of the cell in the compressed grid is green. Yellow strip is reduced to a single line with color yellow. The order is preserved during compression.",
+    "To make the output, you have to compress the grid size by 4, taking a 4x4 block of cells from the original grid and if at least one cell is a color (not black), fill the corresponding cell in the output with that color. This method needs to be repeated using each 4x4 block in the input to create the corresponding cell in the output.",
+    "To make the output grid, you need to take each 3x3 window from the input and evaluate it. If the central cell of the 3x3 window is intersection of the green and orange line, return a green cell in the output grid. If not, return a black cell in the output grid. You should use a sliding window for each 3x3 part of the grid to determine the value of the output grid at the corresponding position.",
+    "For the transformation, start by looking at each 5x5 sub-grid in the input grid. If the majority of cells in the sub-grid are orange, then the corresponding cell in the output grid will be orange. If the majority are brown, then the corresponding cell in the output grid will be brown. If there's a tie, the output cell will be orange. The blue cells are ignored for this transformation process.",
+    "To make the output, you need to compress the input down by counting a group of four identical cells in the input as a single cell in the output grid. However, when an orange cell is encountered within these groups, it 'overrules' any green cells, and the output for that group becomes orange. Gray cells in the input do not affect the output in any way.",
+    "To create the output from the input, you need to compress each 5x5 grid section of the original input into a single cell in the output. The output cell color depends on the colors of the cells in the corresponding 5x5 section of the input: If there is at least one purple cell, the output cell will be green, otherwise the output cell will be black.",
+    "To make the output, you have to scale down the original grid. Perform this by dividing the input in equally spaced segments both vertically and horizontally. Then replace each segment with the color that appears the most in that specific segment to form the output grid. If the segment has equal count of two or more colors, then take the color that comes first when counted from the top left of the segment.",
+    "The output grid is a compressed version of the input grid where each patch of 5x5 same colored pixels in the input grid corresponds to one pixel of the same color in the output grid. Hence, a transformation that would achieve this is by taking the color of the central pixel within every 5x5 block to generate the respective pixel in the output grid. This downscaling operation maintains the color pattern.",
+    "To make the output, you have to res"
+  ],
+  "31": [
+    "To make the output, move all colored cells or numbers to the bottom of the grid, maintaining their left-to-right and top-to-bottom order. The empty spaces left by the moved cells are filled with black cells.",
+    "To make the output, rotate the entire grid either 90 degrees to the left or right, or 180 degrees. This will result in the colored cells being relocated while preserving their relative order.",
+    "To make the output, reverse the order of all the rows or columns in the grid. This is simply flipping the grid vertically or horizontally.",
+    "To make the output, shift all rows or columns in a specific direction. The cells in the last row or column are replaced with the shifted cells from the row or column above or beside.",
+    "To make the output, perform specific operations on certain rows or columns, such as moving colored cells to the bottom of the same column or filling a row with a specific color.",
+    "To make the output, fill specific cells or lines with a certain color based on certain conditions, such as the most frequent color in a line or the first color that appears in the grid.",
+    "To make the output, move all colored cells or numbers down until they hit another color cell or the bottom of the grid, as if gravity is pulling them down. The place of the cell in the grid that is moving down is filled with a black cell.",
+    "To make the output, perform complex or unique transformations, such as rearranging the colored cells into a diagonal order or moving the colored pattern downwards."
+  ],
+  "32": [
+    "To make the output, mirror the symbols along the blue vertical line. Fill the blue vertical line in horizontally to the right of any teal symbols.",
+    "Replace the black squares in the input grid with teal squares in the output grid for cases where the corresponding square in the third space from the blue stripe (either left or right) contains a teal square.",
+    "Use the middle teal line as the centerline and reflect the blue rectangles that are from the top section in the top half of the grid. Every blue pixel that is directly above the teal row should be reflected vertically across the teal row.",
+    "Find the three columns after the blue line in the upper part of the image, if the cell is black in the corresponding column in the lower part of the image, turn it to blue. This transformation is applied to the whole grid.",
+    "Repeat the red pattern of the sequence of each row in the central square (between top and bottom boundary of blue lines) for all black squares in that row residing between two vertical blue stripes.",
+    "Mirror the leftmost and rightmost fuschia patterns symmetrically to fill the middle space. The symbols in the central column remain unchanged.",
+    "Mirror all teal pixels that are present on the left side of every cyan line to its right side. So any teal pixel that is n-pixels left of the line, becomes a teal pixel n-pixels right of the line.",
+    "Fill in corresponding blue boxes at the same places where there are red boxes present in the input grid's square section only if the number of red boxes in this section is more than 1.",
+    "Mirror the patterns in the top and bottom group on the mid-vertical line through the middle of the horizontal teal lines.",
+    "Replace every black cell that is surrounded by non-black cells (either horizontally, vertically, or both), with a teal cell.",
+    "Mirror the red shapes found in the upper region of the shape down to the lower region, while maintaining their mirrored positions. The red shapes from the center row should be duplicated proportionally to both the upper and lower sections as well.",
+    "Mirror the red triangles that appear in the top central area, below the first blue horizontal line, and in the bottom section, above the second blue horizontal line.",
+    "Replace every single instance of a black cell that is surrounded horizontally by a blue cell on each side with a blue cell.",
+    "Replace the black squares surrounding these green squares (horizontally and vertically but not diagonally) with blue.",
+    "Duplicate the green patterns that appear in the bottom half of the grid (rows below the bottom blue line) into the top half right above the top blue line, while leaving the original green pattern still there.",
+    "Mirror the configuration of colored cells in the middle of the grid, between the two horizontal colored lines, diagonally.",
+    "Duplicate the pattern of the colored shapes in the outer bands into the middle band on either side of the teal line, keeping everything else the same.",
+    "Take every red box - when it appears in a quadrant - and you create a mirror-like replica of them on the opposite quadrant with",
+    "Mirror the green symbol of each quadrant along the central vertical line of that quadrant.",
+    "Mirror each image within its respective quadrant diagonally (from top left to bottom right of the quadrant).",
+    "Mirror the green symbol of each quadrant along the central vertical line of that quadrant."
+  ],
+  "35": [],
+  "37": [
+    "Count the number of colored squares in each quadrant of the grid. If a quadrant contains more blue squares than red, output a blue square in the corresponding position on the 1x5 grid. If all quadrants contained more blue squares, the output will be a line of blue squares, otherwise, the last square (rightmost) on the line will be black (0).",
+    "Examine the color of the center square of each quadrant in clockwise order, starting from the top left quadrant. If the center square is colored, output a blue square, otherwise, output a black square.",
+    "Count the total number of each color present in the input grid. The output grid follows a rule \"2 1 2 1 0\" which represents the sequence of blue and red counts. If the sequence is satisfied in the input, fill the corresponding output cell with a '1'. If not, the output cell should be a '0'.",
+    "Compare the blues squares with the red squares. For each row in the grid, put 1 if there's a majority of blue squares or 0 if there's a majority of red squares. If equal, put 0.",
+    "Count the number of 2x2 squares within each 4x4 square that are filled with more of the color of the respective 2x2 square in the middle of the entire grid. Each count corresponds to a box in the output. If the count matches the color in the center (blue boxes = 1, red boxes = 2), the box in the output is filled with blue, if it does not match it is filled with black.",
+    "Start from the cell in the center of the grid and then go to the right, top, left, and bottom cell in that order; for each cell compare its color to the initial center cell's color. If the color matches, put a blue cell in the output grid, otherwise put a black cell. This operation results in an output string of five cells where the center cell is always black as it represents the comparison of the center cell with itself.",
+    "Count the number of blue (1) and red (2) individual square cells in the grid. The output will be a row with 5 cells. Fill the first number of cells equal to the number of blue squares with blue, and the rest with black (0).",
+    "Examine the three diagonal color squares, starting from the top left and moving to the bottom right of the grid. If the diagonal is predominantly red, output two blue squares. If the diagonal is predominantly blue, output two red squares. If the diagonal is predominantly black (or there are no color squares), output a black square."
+  ],
+  "41": [
+    "To make the output, identify the green cells in the input. Depending on their position, move or shift these cells in a specific direction (e.g., counter-clockwise, left, towards the center, or in a knight's move pattern in chess). Replace the original position of the green cell with a teal cell, while keeping the original green cell in its new position.",
+    "To make the output, identify the green cells in the input. Reflect or mirror these cells along a specific axis (e.g., main diagonal, center of the grid, vertical centerline, or both vertical and horizontal centerlines). Place teal cells in the mirrored positions, while keeping the original green cells unchanged.",
+    "To make the output, identify the green cells in the input. Depending on their position or arrangement, place teal cells in specific relative positions (e.g., adjacent, diagonally, above, below, left, right, or surrounding). Keep the original green cells unchanged.",
+    "To make the output, identify the green cells and the center of the grid in the input. Depending on the position of the green cells relative to the center, place teal cells in specific positions (e.g., along the middle row/column, towards the center, at the center, or mirrored over the center). Keep the original green cells unchanged.",
+    "To make the output, identify the pattern or shape formed by the green cells in the input. Depending on the pattern or shape, place teal cells in specific positions (e.g., surrounding, mirroring, or spanning the pattern/shape). Keep the original green cells unchanged.",
+    "To make the output, identify the green cells in the input. Rotate or transpose these cells around a specific point (e.g., center of the grid). Replace the original position of the green cell with a teal cell, while keeping the original green cell in its new position.",
+    "To make the output, identify the green cells in the input. Depending on their position, place teal cells in specific diagonal positions (e.g., mirrored, adjacent, midway, or along a line). Keep the original green cells unchanged.",
+    "To make the output, identify the green cells in the input. Depending on their position, place teal cells in specific positions along the same row or column (e.g., midpoint, symmetric, or at the boundary). Keep the original green cells unchanged."
+  ],
+  "45": [
+    "Remove specific rows or columns from the input grid based on certain conditions, such as their position or the presence of certain colors.",
+    "Replace the colors of certain cells based on specific conditions, such as their position, the colors of neighboring cells, or the presence of certain colors in other parts of the grid.",
+    "Shift or move cells or colors from their original positions to new positions based on certain conditions, such as their color or the colors of neighboring cells.",
+    "Compare the cells in different rows or columns and make changes based on the results of these comparisons, such as changing the color of a cell or removing it entirely.",
+    "Replace the colors of certain cells based on the colors of their neighboring cells, with specific rules for different color combinations.",
+    "Remove specific colors or cells from the input grid based on certain conditions, such as their color or the presence of certain colors in neighboring cells.",
+    "Rotate or mirror certain cells or colors based on specific conditions, such as their position or the presence of certain colors in other parts of the grid.",
+    "Perform specific operations on the middle row or column of the input grid, such as removing certain colors or replacing them with others."
+  ],
+  "46": [
+    "To make the output, draw vertical lines from the colored cells to the top and bottom of the grid, and horizontal lines from left to right. The intersection points between the lines should be colored red. The rest of the grid remains black.",
+    "To make the output, draw vertical lines from the colored cells to the top and bottom of the grid. The intersection points between the lines should be colored red. The rest of the grid remains black.",
+    "To make the output, draw vertical lines from the colored cells to the top and bottom of the grid, and horizontal lines from left to right. Replace the row and column that had the colored cell with the same color except for the intersection with the other color, which should be turned red. The rest of the grid remains black.",
+    "To make the output, draw vertical lines from the colored cells to the top and bottom of the grid. The lines should follow a specific color pattern based on the position in the grid. The rest of the grid remains black.",
+    "To make the output, draw vertical lines from the colored cells to the top and bottom of the grid, and horizontal lines from left to right. The row and column that had the colored cell should be replicated to the row or column above or below. The rest of the grid remains black.",
+    "To make the output, draw vertical lines from the colored cells to the top and bottom of the grid. Then, draw diagonal lines from the top left to bottom right and top right to bottom left through the position of the colored cells. The intersection square between the lines should be painted red. The rest of the grid remains black.",
+    "To make the output, draw vertical lines from the colored cells to the top and bottom of the grid. Then, find the midpoint of these two lines vertically. Draw a horizontal line in red color through this midpoint. The rest of the grid remains black.",
+    "To make the output, draw vertical lines from the colored cells to the top and bottom of the grid. Then, expand both the colored squares until they meet. On meeting, they merge to form a vertical line. The rest of the grid remains black."
+  ],
+  "47": [
+    "To make the output, identify the color of the center cell in the input grid. The output will be a single cell of this color. If the grid is even-sized, consider the cell in the top-left corner of the centermost cells as the center cell.",
+    "To make the output, examine the diagonal cells from the top left to the bottom right and from the top right to the bottom left. If the majority of these diagonal cells are of a certain color, the output will be a single cell of that color. If the colors are equally distributed or if the diagonals contain different colors, the output will be a single black cell.",
+    "To make the output, examine the color of the cells at the four corners of the input grid. If the majority of the corners are of a certain color, the output will be a single cell of that color. If the colors are equally distributed or if the corners contain different colors, the output will be a single black cell.",
+    "To make the output, count the number of each color in the input grid. The output will be a single cell of the color that appears most frequently. If there is a tie, the output will be a single black cell.",
+    "To make the output, identify the color of specific patterns or shapes in the input grid. The output will be a single cell of the color that forms the specific pattern or shape. If no specific pattern or shape is formed, the output will be a single black cell.",
+    "To make the output, identify the color of cells in specific positions in the input grid. The output will be a single cell of the color that appears in these specific positions. If the colors are equally distributed or if the specific positions contain different colors, the output will be a single black cell.",
+    "To make the output, examine the symmetry of colors in the input grid. If the pattern of colors is symmetrical, the output will be a single cell of the color that forms the symmetrical pattern. If the pattern is not symmetrical, the output will be a single black cell.",
+    "To make the output, identify the color of cells in specific sequences or arrangements in the input grid. The output will be a single cell of the color that appears in these specific sequences or arrangements. If the colors are equally distributed or if the sequences or arrangements contain different colors, the output will be a single black cell."
+  ],
+  "48": [
+    "To make the output, identify the smallest rectangle or square within the grid. The color of this shape will fill the output grid.",
+    "To make the output, identify the smallest colored shape within the grid. The color of this shape will fill the output grid.",
+    "To make the output, identify the smallest square or rectangle located in a specific position within the grid. The color of this shape will fill the output grid.",
+    "To make the output, identify the smallest square or rectangle that is fully enclosed within another shape. The color of this shape will fill the output grid.",
+    "To make the output, identify the smallest square or rectangle that is nested within another shape. The color of this shape will fill the output grid.",
+    "To make the output, identify the smallest square or rectangle that is located in the center of the grid. The color of this shape will fill the output grid.",
+    "To make the output, identify the smallest square or rectangle that is not touching the edge of the grid. The color of this shape will fill the output grid.",
+    "To make the output, identify the smallest square or rectangle that is located at the bottom right of the grid. The color of this shape will fill the output grid."
+  ],
+  "50": [
+    "Identify the unique or different color within a shape and extend a vertical line of that color from the position of that cell to the bottom of the grid, leaving the rest of the grid unchanged.",
+    "Identify the smallest or largest numerical value within the grid and extend a vertical line of that color from the position of that cell to the bottom of the grid, leaving the rest of the grid unchanged.",
+    "Identify the unique or different color within a shape and extend a vertical line of that color from the position of that cell to the top of the grid, leaving the rest of the grid unchanged.",
+    "Identify a specific row based on a unique characteristic (e.g., the row with the most number of colored squares) and extend a vertical line of a specific color from that row to the bottom of the grid, leaving the rest of the grid unchanged.",
+    "Identify a specific column based on a unique characteristic (e.g., the column with the least number of colored squares) and extend a vertical line of a specific color from that column to the bottom of the grid, leaving the rest of the grid unchanged.",
+    "Identify a specific color or pattern (e.g., the color blue or a teal square) and extend a vertical line of that color or pattern from the position of that cell to the bottom of the grid, leaving the rest of the grid unchanged.",
+    "Identify a specific color or pattern (e.g., the color red or a green square) and extend a vertical line of that color or pattern from the position of that cell to the top of the grid, leaving the rest of the grid unchanged.",
+    "Identify a specific color or pattern (e.g., the color yellow or a blue square) and extend a horizontal line of that color or pattern from the position of that cell to the right edge of the grid, leaving the rest of the grid unchanged."
+  ],
+  "51": [
+    "If all colors in a row are identical, change the entire row to grey in the output. If there are different colors in a row, change the entire row to black in the output.",
+    "If a row contains three distinct colors, change the entire row to grey in the output. If a row contains less than three distinct colors, change the entire row to black in the output.",
+    "If a row contains any color that matches a color in any other row, change the entire row to grey in the output. If a row contains no matching colors with any other row, change the entire row to black in the output.",
+    "If a row contains a color that appears more than once, change the entire row to grey in the output. If all colors in a row appear only once, change the entire row to black in the output.",
+    "Always change the middle row to grey in the output, regardless of the colors in the row.",
+    "If the top and bottom rows contain the same colors, change both rows to grey in the output. If the top and bottom rows contain different colors, change both rows to black in the output.",
+    "If the majority color of a row matches the color of the first box in the row, change the entire row to grey in the output. If there is no majority color or the majority color does not match the color of the first box in the row, change the entire row to black in the output.",
+    "If a row contains a specific color pattern or meets a specific condition (e.g., all numbers are the same, all colors are different, etc.), change the entire row to grey in the output. If a row does not meet the specific condition, change the entire row to black in the output."
+  ],
+  "56": [
+    "To make the output, locate the colored shape in the input, rotate it 90 degrees (direction may vary), and place it in the output grid. The rotation may involve ignoring black cells, trimming the result to fit the grid, or mirroring the shape. The color remains the same.",
+    "To make the output, identify the colored shape in the input, reflect it horizontally, vertically, or both, and place it in the output grid. The reflection may involve resizing, repositioning, or color inversion.",
+    "To make the output, locate the colored shape in the input, expand or compress it to fit the output grid. The transformation may involve repeating certain cells, removing black cells, or preserving the color and overall shape.",
+    "To make the output, identify the colored shape in the input, and transform it to maintain or create symmetry in the output grid. The transformation may involve mirroring, rotating, or repositioning the shape.",
+    "To make the output, locate the colored shape in the input, reshape it to fit the output grid. The reshaping may involve rotating, removing black cells, or preserving the color and overall shape.",
+    "To make the output, identify the colored shape in the input, replicate or duplicate it, and place it in the output grid. The replication may involve mirroring, rotating, or repositioning the shape.",
+    "To make the output, locate the colored shape in the input, trim the black cells or excess parts, and place it in the output grid. The trimming may involve rotating, resizing, or preserving the color and overall shape.",
+    "To make the output, identify the colored shape in the input, manipulate the color based on certain conditions, and place it in the output grid. The color manipulation may involve repeating certain cells, removing black cells, or inverting colors."
+  ],
+  "64": [
+    "To make the output, select the top half of the input grid, including the dividing line if present. Preserve any unique colors or patterns within this selection. If the height of the input grid is odd, the middle row may be included or excluded based on the presence of unique colors or patterns.",
+    "To make the output, select a specific quadrant or section of the input grid, preserving its colors and configuration. The selected section could be determined by the presence of unique colors or patterns.",
+    "To make the output, select rows or columns from the input grid based on the presence of unique colors or patterns. The selected rows or columns are then used to form the output grid.",
+    "To make the output, select the left half of the input grid, excluding the middle column if present. Preserve any unique colors or patterns within this selection.",
+    "To make the output, select a section of the input grid based on the presence of a unique color or pattern. The selected section is then used to form the output grid.",
+    "To make the output, remove a specific section of the input grid based on the presence of a unique color or pattern. The remaining part of the grid is then used to form the output grid.",
+    "To make the output, resize or transform the input grid while preserving the relative spatial positions of the different colors and maintaining the pattern but at a smaller scale.",
+    "To make the output, select a specific section of the input grid based on the presence of a unique color or pattern. Then, modify this section by removing, resizing, or repositioning elements to form the output grid."
+  ],
+  "67": [
+    "Locate a 3x3 square in the input grid with a specific pattern or color arrangement. In the output grid, recreate this square with modified colors or numbers based on the original square's properties. All other cells in the output grid should be black.",
+    "Identify the three highest or lowest numbers in the input grid. Form a specific pattern or shape in the output grid using these numbers, and fill the rest of the grid with black.",
+    "Identify a specific color group in the input grid and shift or transform it in a specific way in the output grid. All other cells in the output grid should be black.",
+    "Identify a line or line segment in the input grid with specific properties. In the output grid, recreate this line or line segment with modified colors or numbers. All other cells in the output grid should be black.",
+    "Identify the center cell or center square in the input grid. In the output grid, form a specific pattern or shape based on the properties of this center cell or square. All other cells in the output grid should be black.",
+    "Identify a specific pattern or shape in the input grid. In the output grid, recreate this pattern or shape with modified colors or numbers. All other cells in the output grid should be black.",
+    "Identify specific colored cells or colored numbers in the input grid. In the output grid, recreate these cells or numbers with modified colors or positions. All other cells in the output grid should be black.",
+    "Identify cells in the input grid based on their specific positions or directions. In the output grid, recreate these cells with modified colors or numbers. All other cells in the output grid should be black."
+  ],
+  "72": [
+    "Blue to Grey Transformation: To make the output, replace all blue cells in the grid with black cells. Then, move the blue cells to the corresponding positions in the bottom row, replacing the grey cells there. The rest of the grid remains the same.",
+    "Blue to Grey Mirroring: To make the output, mirror the blue cells from the middle row onto the bottom row, replacing the corresponding grey cells. The original blue cells in the middle row are then replaced with black cells.",
+    "Blue to Grey Swapping: To make the output, swap the positions of the blue and grey cells in the grid. The rest of the grid remains the same.",
+    "Blue to Grey Shifting: To make the output, shift the blue cells from their original positions to the corresponding positions in the bottom row, replacing the grey cells there. The original blue cells are then replaced with black cells.",
+    "Blue to Grey Replacement: To make the output, replace the blue cells in the middle row with grey cells, and replace the grey cells in the bottom row with blue cells. The rest of the grid remains the same.",
+    "Blue to Black Transformation: To make the output, replace all blue cells in the grid with black cells. The rest of the grid remains the same.",
+    "Blue to Grey and Grey to Blue Swapping: To make the output, swap the positions of the blue and grey cells in the grid. The rest of the grid remains the same.",
+    "Blue to Grey and Grey to Black Transformation: To make the output, replace the blue cells in the grid with grey cells, and replace the grey cells with black cells. The rest of the grid remains the same."
+  ],
+  "74": [
+    "Copy the colored patterns from the left side of the grid and paste them on the right side, starting from the position of the blue cells. If there are multiple blue cells in a row, repeat the pattern for each blue cell. If there are no blue cells in a row, leave the cells as they are.",
+    "Mirror the colored patterns from the left side of the grid to the right side, starting from the position of the blue cells. If there are multiple blue cells in a row, repeat the mirroring for each blue cell. If there are no blue cells in a row, leave the cells as they are.",
+    "Repeat the colored patterns from the left side of the grid on the right side, starting from the position of the blue cells. If there are multiple blue cells in a row, repeat the pattern for each blue cell. If there are no blue cells in a row, leave the cells as they are.",
+    "Copy the colored patterns from the left side of the grid and paste them on the right side, starting from the position of the blue cells. If there are multiple blue cells in a row, repeat the pattern for each blue cell, with additional rules for how to handle the overlap.",
+    "Repeat the colored patterns from the left side of the grid on the right side, starting from the position of the blue cells. If there are multiple blue cells in a row, repeat the pattern for each blue cell, with additional rules for how to handle the overlap.",
+    "Copy the colored patterns from the left side of the grid and paste them on the right side, starting from the position of the blue cells. If there are no blue cells in a row, follow additional rules for how to handle the cells.",
+    "Repeat the colored patterns from the left side of the grid on the right side, starting from the position of the blue cells. If there are no blue cells in a row, follow additional rules for how to handle the cells.",
+    "Mirror the colored patterns from the left side of the grid to the right side, starting from the position of the blue cells. If there are no blue cells in a row, follow additional rules for how to handle the cells."
+  ],
+  "77": [
+    "To make the output, shift the red cells from the bottom half of the grid upwards until they collide with the structure in the top half of the grid. The red cells replace the blue cells they collide with. All cells left empty following the shift should be filled with black cells (0).",
+    "To make the output, replace all blue cells in the top block that match the position of a red cell in the bottom block with a red cell. Replace the original red cell block with a block of black cells. Keep all other cells the same.",
+    "To make the output, rotate the bottom half of the pattern to the top, replacing the blue cells where the red line is overlaid, and then clear the bottom half, turning all the cells into black colour.",
+    "To make the output, swap the blue squares of the shape from the top half of the grid with red squares from the bottom half. The shape is essentially mirrored along the horizontal midline of the grid. The red squares take the places of the corresponding blue squares and vice versa.",
+    "To make the output, you have to flip the grid horizontally but only the non-black portion, with blue portion flipping onto the red portion and red portion flipping onto blue portion. The black cells remains same in their positions.",
+    "To make the output, you should first mirror flip the bottom half of the input grid so it aligns with the top half. Then, overlay the flipped bottom half onto the top half. If a blue box from the top half overlaps with a red box from the flipped bottom half, keep the blue box; if a blue box from the top half overlaps with a blank space from the flipped bottom half, change the blue box to red.",
+    "Reflect the first half just above the line of black cells onto the second half, turning red pixel into blue where there are any, and maintaining black cells. The result will be a mirrored copy of the upper block, replacing the lower one, where black cells of the upper block are mirrored as black cells and the rest as blue cells. The line of black cells and everything above it remain as they are.",
+    "To make the output, move the \"sword\" upwards over the available \"tower\" squares until the \"sword\" tip reaches a non-blue square or the top. Replace any overlapping blue squares with red squares. Any unoccupied squares that were previously occupied by the \"sword\" should revert to black."
+  ],
+  "78": [
+    "To make the output, you have to identify a specific pattern in the input grid, scale it down, and replicate it in the 3x3 output grid, maintaining the original color and arrangement.",
+    "To make the output, you have to identify a specific color in the input grid, and use this color to create a specific pattern in the 3x3 output grid.",
+    "To make the output, you have to identify a specific shape in the input grid, and replicate this shape in the 3x3 output grid, maintaining the original color and arrangement.",
+    "To make the output, you have to identify a specific position in the input grid, and replicate the color and arrangement of this position in the 3x3 output grid.",
+    "To make the output, you have to identify a specific size in the input grid, and replicate this size in the 3x3 output grid, maintaining the original color and arrangement.",
+    "To make the output, you have to identify a specific sequence in the input grid, and replicate this sequence in the 3x3 output grid, maintaining the original color and arrangement.",
+    "To make the output, you have to identify a specific number in the input grid, and replicate this number in the 3x3 output grid, maintaining the original color and arrangement.",
+    "To make the output, you have to identify a specific figure in the input grid, and replicate this figure in the 3x3 output grid, maintaining the original color and arrangement."
+  ],
+  "97": [
+    "Hollowing Rectangles/Squares: To make the output, identify each colored rectangle or square in the input. Replace the interior cells of each shape with black, leaving only a border of the original color. The thickness of the border is one cell. This transformation does not affect the black cells or any cells not part of these shapes.",
+    "Hollowing Rectangles/Squares with Size Condition: To make the output, identify each colored rectangle or square in the input. If the shape is larger than a specified size, replace the interior cells with black, leaving only a border of the original color. If the shape is smaller than or equal to the specified size, leave it as is. The thickness of the border is one cell. This transformation does not affect the black cells or any cells not part of these shapes.",
+    "Hollowing Rectangles/Squares with Middle Line: To make the output, identify each colored rectangle or square in the input. Replace the interior cells of each shape with black, leaving only a border of the original color and a middle line of the original color. The thickness of the border is one cell. This transformation does not affect the black cells or any cells not part of these shapes.",
+    "Hollowing Rectangles/Squares with Border Thickness: To make the output, identify each colored rectangle or square in the input. Replace the interior cells of each shape with black, leaving only a border of the original color. The thickness of the border is more than one cell. This transformation does not affect the black cells or any cells not part of these shapes.",
+    "Hollowing Rectangles/Squares with Specific Hole Size: To make the output, identify each colored rectangle or square in the input. Replace the interior cells of each shape with black, leaving only a border of the original color. The size of the hole depends on the color or size of the shape. This transformation does not affect the black cells or any cells not part of these shapes.",
+    "Hollowing Rectangles/Squares with Middle Cross: To make the output, identify each colored rectangle or square in the input. Replace the interior cells of each shape with black, leaving only a border of the original color and a cross in the middle of the original color. The thickness of the border is one cell. This transformation does not affect the black cells or any cells not part of these shapes.",
+    "Hollowing Rectangles/Squares with Specific Rows/Columns: To make the output, identify each colored rectangle or square in the input. Replace the interior cells of each shape with black, leaving only specific rows or columns of the original color. This transformation does not affect the black cells or any cells not part of these shapes.",
+    "Hollowing Rectangles/Squares with Diagonal Lines: To make the output, identify each colored rectangle or square in the input. Replace the interior cells of each shape with black, leaving only a border of the original color and diagonal lines of the original color. The thickness of the border is one cell. This transformation does not affect the black cells or any cells not part of these shapes."
+  ],
+  "98": [
+    "Rules that involve changing the color of pixels based on the color of a central pixel.",
+    "Rules that involve changing the color of pixels based on the color of a specific pixel in a sequence.",
+    "Rules that involve changing the color of pixels based on the color of a pixel in a specific location.",
+    "Rules that involve changing the color of pixels based on the color of a pixel in a specific row or column.",
+    "Rules that involve changing the color of pixels based on the color of a pixel in a specific shape.",
+    "Rules that involve changing the color of pixels based on the color of a pixel in a specific pattern."
+  ],
+  "99": [
+    "To make the output, identify the most frequent or dominant non-black color in the input. Fill the output grid with this color.",
+    "To make the output, identify the color of a specific position in the input (e.g., top left, bottom right, first shape, etc.). Fill the output grid with this color.",
+    "To make the output, identify the color of the first or topmost shape in the input. Fill the output grid with this color.",
+    "To make the output, identify the color of the last or bottommost shape in the input. Fill the output grid with this color.",
+    "To make the output, identify the color of the second shape or box in the input. Fill the output grid with this color.",
+    "To make the output, identify the color of the larger or bigger shape in the input. Fill the output grid with this color.",
+    "To make the output, identify the color of the smaller or specific size shape in the input. Fill the output grid with this color.",
+    "To make the output, identify the color of a specific shape (e.g., square, rectangle) in the input. Fill the output grid with this color."
+  ],
+  "100": [
+    "The topmost blue shape in the input grid moves downwards until it encounters a red shape or the bottom of the grid, filling all the black cells it passes with blue. If it hits a red shape, it stops at the row above it; if it doesn't hit any red shapes, it fills all the way to the very bottom of the grid. The red shapes remain at their initial positions.",
+    "To make the output, you have to replace the whole area spanned by one color with the other color, while keeping the original pattern. For example, if the blue color is on top and red color is at the bottom, the colors should be swapped.",
+    "To make the output, you have to repeat the top rectangle on the rows right above the bottom rectangle. The length of the rectangle is determined by the width of the top rectangle. This rectangle keeps its original color - blue. The bottom rectangle keeps its original color - red. When it repeats, the rectangle doesn't overwrite the color of the bottom rectangle, so only the black pixels will be replaced.",
+    "To form the output, find the outline box of the non-black squares (assuming black to be background). Then, the blue cross is copied over all the rows that have red squares in the same column. The red squares are maintained and not changed.",
+    "To make the output, you have to look for the red band on the input grid and duplicate it above in the direction of the blue band if any. The blue band gets overwritten here by the red band.",
+    "Take the blue cross from the input grid and rotate it 90 degrees in clockwise direction. Place the rotated shape in the output at the same location where the line of red cells starts from in the input grid. If there exist any intervening cells on the positioning area, they should be replaced by the cells from the rotated shape. The rest of the grid remains the same in output as input.",
+    "To make the output, you have to take the single column or line of squares from the top-middle or middle-right respectively and copy it downwards or leftwards respectively to make a solid block filling up that half of the grid. The size and position of the block depends on the location of the original line or column.",
+    "To make the output, you have to reflect the top form directly beneath it, if there is no other color or form in between. If there's a second form at the bottom half, this should get reflected upwards. If there's a third from in the middle, this should get reflected both upwards and downwards. The reflection should happen in the same columns as the original form. If there's a form obstructing the reflection, the obstructing form should stay as it is without being overlayed."
+  ],
+  "107": [
+    "To make the output, you have to magnify the entire input grid, including black cells, by a factor of 2. Each cell in the input grid is mapped to a 4x4 block in the output grid, preserving the original color.",
+    "To make the output, you have to magnify only the colored cells in the input grid by a factor of 4, leaving black cells unchanged. Each colored cell in the input grid is mapped to a 4x4 block of the same color in the output grid.",
+    "To make the output, you have to magnify colored cells in the input grid by a factor of 4, while maintaining specific positioning or ordering of these cells in the output grid. Black cells remain unchanged.",
+    "To make the output, you have to magnify the input grid, including a mirroring or rotation operation. Each cell in the input grid is mapped to a 4x4 block in the output grid, preserving the original color.",
+    "To make the output, you have to magnify the input grid, with specific handling of the top and bottom rows. Each cell in these rows is mapped to a 4x4 block in the output grid, preserving the original color.",
+    "To make the output, you have to magnify the input grid, with specific handling of colored cells based on their column position. Each cell in these columns is mapped to a 4x4 block in the output grid, preserving the original color.",
+    "To make the output, you have to magnify the input grid, with specific handling of colored cells based on their row position. Each cell in these rows is mapped to a 4x4 block in the output grid, preserving the original color.",
+    "To make the output, you have to magnify the input grid, with specific handling of colored cells based on their row and column position. Each cell in these positions is mapped to a 4x4 block in the output grid, preserving the original color."
+  ],
+  "115": [
+    "To create the output grid, mirror the input grid along its horizontal central axis and append this mirrored version to the original grid. This results in a grid that is twice the height of the original, with the bottom half being a vertically flipped version of the top half."
+  ],
+  "126": [
+    "For each section, the transformation depends on the color of the middle cell. The middle cell color determines the color of the entire section, with each original color mapping to a new color. Grey lines remain unchanged.",
+    "The color of the black cells on the same horizontal line as a colored cell changes according to the color of the colored cell. The color-to-number mapping follows a specific pattern, with grey cells remaining the same.",
+    "Each unique colored cell in a section is mapped to a new color. The new color spans across the whole line, replacing the black cells. Grey cells remain the same.",
+    "The transformation depends on the color of the middle row of each section. The entire section is filled with the new color corresponding to the original middle row color. Grey lines remain unchanged.",
+    "The transformation involves replacing each colored cell in the input grid with a new color. The grey lines and black cells remain the same. If the input has multiple sections divided by the grey lines, then perform the same operation in each section separately.",
+    "The transformation involves replacing each colored cell in the input grid with a new color based on the distance from the grey line. The grey lines remain the same. If the input has multiple sections divided by the grey lines, then perform the same operation in each section separately.",
+    "The transformation involves replacing each colored cell in the input grid with a new color based on the position in the grid. The grey lines remain the same. If the input has multiple sections divided by the grey lines, then perform the same operation in each section separately.",
+    "The transformation involves replacing each colored cell in the input grid with a new color based on the presence of a grey line. The grey lines remain the same. If the input has multiple sections divided by the grey lines, then perform the same operation in each section separately."
+  ],
+  "127": [
+    "To make the output, shift each colored section upwards by a specific amount, maintaining their relative positions. If a section reaches the top of the grid, it wraps around to the bottom. The rest of the grid remains black.",
+    "To make the output, shift each colored section upwards until they hit the top of the grid or another colored section. The rest of the grid remains black.",
+    "To make the output, shift each colored section upwards by a specific amount. The space vacated by the shift is replaced with black. The rest of the grid remains unchanged.",
+    "To make the output, shift each colored section upwards by a specific amount, maintaining their relative positions. Duplicate a specific section and add it to the middle of the grid. The rest of the grid remains black.",
+    "To make the output, shift each colored section upwards by a specific amount. Replace each section with another section from the input, maintaining the relative positions. The rest of the grid remains black.",
+    "To make the output, shift each colored section towards the center of the grid, maintaining their relative positions. The rest of the grid remains black.",
+    "To make the output, rotate each colored section by a specific amount, maintaining their relative positions. The rest of the grid remains black.",
+    "To make the output, mirror each colored section along a specific axis, maintaining their relative positions. The rest of the grid remains black."
+  ],
+  "128": [
+    "Identify the color or number in the center of the input grid and fill the output grid with that color or number.",
+    "Identify the color or number that appears most frequently in the input grid and fill the output grid with that color or number.",
+    "Identify the color or number that appears in the diagonal from top left to bottom right in the input grid and fill the output grid with that color or number.",
+    "Identify the color or number that appears in the middle row of the input grid and fill the output grid with that color or number.",
+    "Identify the color or number that appears twice in the middle row of the input grid and fill the output grid with that color or number.",
+    "Identify the color or number that appears in the diagonal from top right to bottom left in the input grid and fill the output grid with that color or number.",
+    "Identify the color or number that appears in every row and every column of the input grid and fill the output grid with that color or number.",
+    "Identify the color or number that appears twice in the diagonals of the input grid and fill the output grid with that color or number."
+  ],
+  "132": [
+    "Horizontal Expansion: To make the output, identify colored patterns or shapes in the input grid and extend them horizontally until they touch either side of the grid or another square. The extension should not overwrite any existing squares of different colors.",
+    "Vertical Expansion: To make the output, identify colored patterns or shapes in the input grid and extend them vertically until they touch either the top or bottom of the grid or another square. The extension should not overwrite any existing squares of different colors.",
+    "All Directions Expansion: To make the output, identify colored patterns or shapes in the input grid and extend them in all directions until they touch the grid boundaries or another square. The extension should not overwrite any existing squares of different colors.",
+    "Reflection or Mirroring: To make the output, identify colored patterns or shapes in the input grid and create a mirrored version of them across a specified axis. The mirrored version should not overwrite any existing squares of different colors.",
+    "Duplication or Replication: To make the output, identify colored patterns or shapes in the input grid and create duplicates of them in specified locations. The duplicates should not overwrite any existing squares of different colors.",
+    "Transformation or Alteration: To make the output, identify colored patterns or shapes in the input grid and transform or alter them based on specific rules. The transformation or alteration should not overwrite any existing squares of different colors.",
+    "Condition-Based Extension: To make the output, identify colored patterns or shapes in the input grid and extend them based on specific conditions. The extension should not overwrite any existing squares of different colors.",
+    "Color-Based Transformation or Alteration: To make the output, identify colored patterns or shapes in the input grid and transform or alter them based on their colors. The transformation or alteration should not overwrite any existing squares of different colors."
+  ],
+  "136": [
+    "To make the output, identify the location of colored cells in the input grid. Draw a square or rectangle of the same color around each colored cell, with the size and position of the square or rectangle determined by specific rules. The rest of the grid remains the same as the input.",
+    "To make the output, identify the location of colored cells in the input grid. Draw horizontal, vertical, or diagonal lines across the grid based on the position of each colored cell. The lines should be of the same color as the corresponding colored cell. The rest of the grid remains the same as the input.",
+    "To make the output, identify the location of colored cells in the input grid. Draw specific shapes (cross, star, etc.) centered on each colored cell, with the shape and color determined by specific rules. The rest of the grid remains the same as the input.",
+    "To make the output, identify the location of colored cells in the input grid. Transform the grid based on the position of each colored cell, with the transformation rules varying based on specific conditions. The rest of the grid remains the same as the input.",
+    "To make the output, identify the location of colored cells in the input grid. Create patterns or structures (bounding box, game board, etc.) based on each colored cell, with the pattern or structure and color determined by specific rules. The rest of the grid remains the same as the input.",
+    "To make the output, identify the location of colored cells in the input grid. Fill or color certain areas of the grid based on each colored cell, with the area and color determined by specific rules. The rest of the grid remains the same as the input.",
+    "To make the output, identify the location of colored cells in the input grid. Rotate or shift the grid based on each colored cell, with the rotation or shift rules varying based on specific conditions. The rest of the grid remains the same as the input.",
+    "To make the output, identify the location of colored cells in the input grid. Create specific symbols or figures (digit \"0\", \"8\", etc.) based on each colored cell, with the symbol or figure and color determined by specific rules. The rest of the grid remains the same as the input."
+  ],
+  "137": [
+    "To make the output, select specific columns based on certain criteria (e.g., color, position, content), manipulate these columns (e.g., compress, remove, merge), and disregard the rest. The order, color, and content of the selected columns should be preserved unless specified otherwise.",
+    "To make the output, compress or reduce the input grid by removing or merging certain rows, columns, or cells based on specific criteria (e.g., color, position, content). The remaining elements should be rearranged or transformed as specified.",
+    "To make the output, manipulate the colors in the input grid based on certain criteria (e.g., position, adjacent colors, specific color rules). The resulting grid should reflect these color changes while maintaining the overall structure unless specified otherwise.",
+    "To make the output, divide or segment the input grid into specific parts based on certain criteria (e.g., color, position). Manipulate these parts as specified and disregard the rest. The resulting grid should reflect these divisions or segments.",
+    "To make the output, reflect or mirror parts of the input grid based on certain criteria (e.g., position, color). The resulting grid should maintain the reflected or mirrored structure.",
+    "To make the output, extract or slice specific parts of the input grid based on certain criteria (e.g., color, position). The resulting grid should consist of these extracted or sliced parts.",
+    "To make the output, transform the input grid based on specific patterns or structures (e.g., stripes, squares, lines). The resulting grid should reflect these patterns or structures.",
+    "To make the output, manipulate the input grid based on specific numbers or indices (e.g., every second column, specific numbered cells). The resulting grid should reflect these number or index-based manipulations."
+  ],
+  "148": [],
+  "151": [
+    "Symmetrical Expansion: To create the output, expand the 3x3 input grid to a 6x6 grid by mirroring it both horizontally and vertically. The resulting grid is symmetrical along both axes, with the original grid appearing in the top-left quadrant.",
+    "Diagonal Reflection: To create the output, reflect the input grid diagonally from the top-left to the bottom-right. The original grid is reflected to the bottom-right quadrant, and the top-right and bottom-left quadrants are mirror images of each other.",
+    "Center Reflection: To create the output, reflect the input grid both horizontally and vertically around the central cell to create a 6x6 grid. The center of the output grid is a duplicate of the center of the input grid.",
+    "Quadrant Replication: To create the output, replicate the input grid in each quadrant of the 6x6 output grid. The top-right and bottom-left quadrants are mirror images of the input grid, while the top-left and bottom-right quadrants are identical to the input grid.",
+    "Axis Reflection: To create the output, reflect the input grid along both the vertical and horizontal axes. The reflection should be along the center line of the input grid, creating four identical quadrants.",
+    "Row and Column Reflection: To create the output, reflect each row and column of the input grid to form a 6x6 grid. Each row and column in the output should be read the same forward and reversed.",
+    "Cell Reflection: To create the output, for each cell in the input grid, copy the cell to its mirror image position (both horizontally and vertically) with respect to the center of the output grid. This process results in a symmetrical pattern that is a mirror image both horizontally and vertically.",
+    "Tile-like Repetition: To create the output, copy the input 3x3 grid twice to the right, then flip them left to right. Then take this complete line and copy it downwards twice and then flip the two lines top to bottom. This results in a mirrored and flipped, tile-like repetition of the original 3x3 grid to form a 6x6 output grid."
+  ],
+  "152": [
+    "Transform colors and shapes based on their position in the input grid. Leave empty positions as black in the output grid. Maintain the orientation of colors in the output.",
+    "Compress the input grid into a 3x3 grid. Determine the color of each cell in the output based on the most frequent color in the corresponding area of the input grid.",
+    "Place colored shapes from the input grid into specific positions in the output grid, maintaining their original positions.",
+    "Identify and redraw colored symbols from the input grid onto a 3x3 grid in proportion. Fill overlapping areas with the color of the symbol that appears later from top to bottom.",
+    "Rotate and/or mirror shapes or colors from the input grid. Maintain the new orientation in the output grid.",
+    "Extract and shrink colored areas from the input grid to fit into a 3x3 grid. Maintain the position and color of cells in the output grid.",
+    "Identify and combine colored shapes from the input grid to form a new shape in the output grid. Maintain the color and position of cells in the combined shape.",
+    "Identify and transform colored squares or rectangles from the input grid to fit into a 3x3 grid. Maintain the color and position of cells in the transformed squares or rectangles."
+  ],
+  "153": [
+    "Mirroring or Symmetry Rule: Mirror the colored cells along the central axis of the grid or specific shapes, maintaining the position of other cells.",
+    "Shifting or Moving Rule: Shift or move colored cells to specific positions, such as the center or around certain shapes, while keeping other cells unchanged.",
+    "Rotation Rule: Rotate the grid or specific parts of it by a certain degree, maintaining the color and position of other cells.",
+    "Concentration or Centralization Rule: Concentrate or centralize colored cells in the middle or around specific shapes, transforming other cells as necessary.",
+    "Preservation Rule: Preserve certain cells in their original state while transforming other cells according to specific rules.",
+    "Replacement or Transformation Rule: Replace or transform one type of cell into another, following specific patterns or rules.",
+    "Removal or Erasure Rule: Remove or erase certain cells, filling their positions with a specific color or leaving them empty.",
+    "Pattern Creation Rule: Create specific patterns in the grid using colored cells, maintaining the position and color of other cells."
+  ],
+  "158": [
+    "Rules involving color transformation and shape merging: 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62.",
+    "Rules involving shape resizing and repositioning: 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62.",
+    "Rules involving shape overlay and color precedence: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62.",
+    "Rules involving shape extraction and combination: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62.",
+    "Rules involving shape reflection and rotation: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62.",
+    "Rules involving shape compression and decompression: 1, 2, 3"
+  ],
+  "159": [
+    "To make the output, you need to identify the blue cells that form the shape of the letter \"C\" in the input grid. Replace these blue cells with red in the output grid. Keep all other cells the same.",
+    "To obtain the output, you have to identify the blue cells that form the shape of the letter \"S\" in the input grid. Replace these blue cells with red in the output grid. Leave all other cells unchanged.",
+    "To create the output, you need to identify the blue cells that form the shape of the letter \"T\" in the input grid. Replace these blue cells with red in the output grid. Keep all other cells the same.",
+    "To make the output, you have to identify the blue cells that form the shape of the letter \"U\" in the input grid. Replace these blue cells with red in the output grid. Leave all other cells unchanged.",
+    "To create the output, you need to identify the blue cells that form the shape of the letter \"V\" in the input grid. Replace these blue cells with red in the output grid. Keep all other cells the same.",
+    "To make the output, you have to identify the blue cells that form the shape of the letter \"W\" in the input grid. Replace these blue cells with red in the output grid. Leave all other cells unchanged."
+  ],
+  "162": [
+    "To make the output, keep all grey cells from the input. For each distinct area defined by the grey cells, keep only the cell with the maximum value. If an area does not include any non-grey cells, then fill it with zeroes.",
+    "To make the output, scan each row and retain the highest colored number if it is not grey and replace it on the middle grey cell. All the other cells in the row should become black. If a row is below a certain line, replace all cells in that row with black.",
+    "To make the output, you have to take the maximum value of color in each quadrant excluding the grey and black, and replace it with the maximum color value while making every other color black and keeping grey as it is. If there are no colors in any quadrant, the quadrant remains black.",
+    "To make the output, check for colored square in rows above and below the teal (5) row, keep only the maximum and minimum values per column and replace all others with black. The color teal should stay consistent throughout all cases.",
+    "To make the output, you have to change the colors other than grey, blue, and coral to black. Then, for each interval between the bands of grey, remove the color that is not aligned with the color of coral. Finally, replace the color that is aligned with the color of coral with the highest number in all the intervals. The next highest number should be replaced in the next interval and so on.",
+    "The transformation involves rotating the grid multiple times. Each of the 1st, 2nd, 3rd, 5th, 6th, 7th, 9th, 10th, and 11th rows (from both top and bottom) is turned into black cells except the middle five, which are blue, yielding a pattern similar to the 4th and 8th rows in the input, i.e., [0 0 0 5 5 5 5 5 0 0 0]. The 4th and 8th rows remain the same in the output as they were in the input. Exceptions are the cells located on symmetric diagonals for these two rows: if the cell at the symmetric diagonal, as well as the cell itself, located on the 1st, 2nd, 3rd, 5th, 6th, 7th.",
+    "To make the output, you have to calculate the product of all the non-grey cells (nonempty and non-5s cells) in each quadrant of the input grid and then, place the product at the matching position in each quadrant of the output grid."
+  ],
+  "165": [
+    "To make the output, identify the teal cells that are part of a larger teal shape or digit. Change these cells to red if they meet specific positional criteria within the shape or digit, such as being in the center, on the border, or forming a specific pattern.",
+    "To make the output, examine the adjacency of each teal cell to black cells. If a teal cell meets certain adjacency criteria, such as being surrounded by black cells or having a black cell to its left or right, change it to red.",
+    "To make the output, identify teal cells that are isolated or lack adjacency to other teal cells. Change these cells to red.",
+    "To make the output, examine the position of each teal cell within the grid or relative to the grid's edges. If a teal cell meets certain positional criteria, such as being on the edge of the grid or not having a teal cell below it, change it to red.",
+    "To make the output, examine the position or adjacency of each black cell to teal cells. If a black cell meets certain criteria, such as being surrounded by teal cells or being adjacent to a teal cell, change it to red.",
+    "To make the output, count the number of teal or black cells surrounding each teal cell. If a teal cell is surrounded by a certain number of teal or black cells, change it to red.",
+    "To make the output, identify specific teal cells that, when changed to red, form a new shape or pattern. Change these cells to red.",
+    "To make the output, examine the position of each teal cell within a row, column, or diagonal. If a teal cell meets certain positional criteria, such as being the third cell in a row or being part of a diagonal, change it to red."
+  ],
+  "166": [
+    "To make the output, identify the most frequent color in the input grid. If there are multiple colors with the same frequency, consider the lowest value color. Replace all cells of this color with grey in the output grid, and all other cells with black.",
+    "To make the output, examine the diagonals of the input grid. If a diagonal contains all cells of the same color, replace these cells with grey in the output grid. If not, replace the cells of the primary diagonal (from top left to bottom right) with grey. All other cells should be black.",
+    "To make the output, compare each cell in the input grid with the cell below it and to its right. If a cell matches both these cells, replace it with grey in the output grid. If not, replace it with black. If a cell has no other cells to compare, fill it with grey.",
+    "To make the output, identify the color or number in the center cell of the input grid. Replace all cells of this color or number with grey in the output grid, and all other cells with black.",
+    "To make the output, examine each row in the input grid. If a row contains only one color, replace all cells in the corresponding row of the output grid with grey. If a row contains multiple colors, replace the cell with color '2' (red on the input) with grey on output and rest with black, forming a diagonal line from top left to bottom right.",
+    "To make the output, replace all red cells in the input grid with grey cells in the output. Then, fill the diagonal cells starting from the top left to the bottom right with grey cells. The remaining cells, fill with black cells.",
+    "To make the output, identify the least frequent color in the input grid. Replace all cells of this color with grey in the output grid. Then, any cell which is not grey in the output will correspond to the first non-matching cell with the same color in the input reading in rows from left to right, starting from top.",
+    "To make the output, locate the cell in the input with the value 2 (Red colored cell). In the output, fill a number 5 (grey cell) diagonally starting from the first cell to until you reach the same position as 2 in input. The cell in the output that aligns with position of 2 in input should receive 5, and other cells in line should get 0 (Black). The remaining cells are all black (0)."
+  ],
+  "167": [
+    "To make the output, rotate the grid 90 degrees clockwise.",
+    "To make the output, rotate the grid 180 degrees clockwise.",
+    "To make the output, rotate the grid 270 degrees clockwise.",
+    "To make the output, rotate the grid 90 degrees counterclockwise.",
+    "To make the output, rotate the grid 180 degrees counterclockwise.",
+    "To make the output, rotate the grid 270 degrees counterclockwise.",
+    "To make the output, rotate the grid 90 degrees clockwise and then mirror it along the vertical axis.",
+    "To make the output, rotate the grid 90 degrees counterclockwise and then mirror it along the vertical axis.",
+    "To make the output, rotate the grid 180 degrees clockwise and then mirror it along the vertical axis.",
+    "To make the output, rotate the grid 180 degrees counterclockwise and then mirror it along the vertical axis.",
+    "To make the output, rotate the grid 90 degrees clockwise and then mirror it along the diagonal axis.",
+    "To make the output, rotate the grid 90 degrees counterclockwise and then mirror it along the diagonal axis.",
+    "To make the output, rotate the grid 180 degrees clockwise and then mirror it along the diagonal axis.",
+    "To make the output, rotate the grid 180 degrees counterclockwise and then mirror it along the diagonal axis.",
+    "To make the output, rotate the grid 270 degrees clockwise and then mirror it along the diagonal axis.",
+    "To make the output, rotate the grid 270 degrees counterclockwise and then mirror it along the diagonal axis."
+  ],
+  "170": [
+    "To generate the output, replace all the cells on the outermost edge or perimeter of the input grid with teal (represented by the number 8), while keeping all the inner cells black (represented by the number 0). This process creates a teal border or frame around the grid, regardless of its size, leaving the center and all other cells black. If the grid size does not allow for an interior (e.g., 3x3) all cells should be teal. This rule applies to any grid size and forms a standalone rule without any information from the original rules."
+  ],
+  "173": [
+    "To make the output, identify the colored shapes in the input grid and shrink them down by merging each 2x2 square into one square of the same color. The result is manifested in the output grid.",
+    "To make the output, select specific rows or sections from the input grid based on their position and replicate them in the output grid. If there is no such row or section, fill the entire row or section with black.",
+    "To make the output, observe the color and shape of the objects in the input grid. The color and shape of the output grid are determined by matching or swapping the colors and shapes of the objects in the input grid.",
+    "To create the output grid, overlay or superimpose the colored shapes from the input grid. If a position in one shape overlaps with a position in another shape, the overlapping square should receive the color from the first shape. If a position in one shape does not overlap with a position in another shape, the square should be black.",
+    "To make the output, identify the colored shapes in the input grid and rotate or reflect them based on their position. The rotated or reflected shapes are then replicated in the output grid.",
+    "To make the output, extract or isolate specific shapes or objects from the input grid based on their color, size, or position. The extracted or isolated shapes or objects are then replicated in the output grid.",
+    "To make the output, identify the colored shapes in the input grid based on their size or position and manipulate or transform them accordingly. The manipulated or transformed shapes are then replicated in the output grid.",
+    "To make the output, identify specific patterns or figures in the input grid and replicate them in the output grid. The replicated patterns or figures should maintain their original color and shape."
+  ],
+  "174": [
+    "To make the output, replace each black cell with the color of the cell in a specific direction or position. If there is no cell in that direction or position, keep the cell black.",
+    "To make the output, replace each black cell with the color that is most common in the same row or column, excluding black cells. In case of a tie, prefer the color with the highest numeric value.",
+    "To make the output, replace each black cell with the color that surrounds it the most on its left, right, top, and bottom neighbors. The diagonal neighbors are ignored. In case of a tie between two or more colors, prefer the color with the highest numeric value.",
+    "To make the output, replace each black cell with the color that should have been in its place according to a specific pattern in the rest of the row or column.",
+    "To make the output, replace each black cell with the color of a cell in a specific sequence or pattern. If there is no cell in that sequence or pattern, keep the cell black.",
+    "To make the output, replace each black cell with the color of a cell in a specific area or region. If there is no cell in that area or region, keep the cell black.",
+    "To make the output, replace each black cell with the color of a cell based on a specific condition or rule. If the condition or rule is not met, keep the cell black.",
+    "To make the output, replace each black cell with the color of a cell based on a specific transformation or operation. If the transformation or operation cannot be performed, keep the cell black."
+  ],
+  "185": [
+    "If a blue cell is adjacent (horizontally or vertically) to at least one other blue cell, transform it to red in the output grid. If a blue cell is not adjacent to any other blue cells, it remains black. All other cells remain black.",
+    "If a row or column contains at least one blue cell, transform the corresponding cells in the output grid to red. If a row or column contains no blue cells, all corresponding cells in the output grid remain black.",
+    "If a blue cell is located on a diagonal (from top left to bottom right or top right to bottom left), transform it to red in the output grid. All other cells remain black.",
+    "Count the number of blue cells in the input grid. Based on the count, transform a specific number or position of cells to red in the output grid. All other cells remain black.",
+    "If a blue cell is located along a specific pattern or path (such as top row, left column, or a diagonal), transform it to red in the output grid. All other cells remain black.",
+    "If a blue cell is located in a symmetrical position across a specific axis (such as the diagonal axis), transform it to red in the output grid. All other cells remain black.",
+    "If a blue cell is located in the same row or column as the first blue cell or the leftmost cells, transform it to red in the output grid. All other cells remain black.",
+    "If a blue cell is located in a specific position relative to other cells (such as above, below, or to the right of another cell), transform it to red in the output grid. All other cells remain black."
+  ],
+  "187": [
+    "Half Grid Retention: To make the output, you need to cut the input grid in half vertically, keeping the left half as the resulting output grid. This rule applies regardless of the input size or pattern repetition.",
+    "Row Halving: To make the output, you have to take the first half of each row from the input grid and discard the rest. This rule applies to each row individually, regardless of the overall grid size or pattern repetition.",
+    "Pattern Removal: To make the output, you have to remove the repeated pattern in the middle leaving out half of the input. This rule applies when the input grid has a repeating pattern that can be removed to create the output.",
+    "Column Retention: To make the output, you need to take the first half of the columns from the input grid. This rule applies regardless of the input size or pattern repetition.",
+    "Grid Division: To make the output, identify the division line that halves the input grid into two identical parts either vertically or horizontally. Discard one half to get the output. The division line is determined by the layout itself, for wider grids vertical division is sought, for taller grids horizontal division is applied, and for square grids either direction can work.",
+    "Column Removal: To make the output, you have to remove every second column in the input grid starting from the second column. From left you should only keep the first, third, fifth and so on columns moving to the right. Apply this rule until you reach grid symmetric center.",
+    "Mirror Transformation: To make the output, you should mirror the left half of the input grid. If the input grid has an odd number of columns, still mirror the left half excluding the middle column.",
+    "Pattern Extraction: To transform the input into the output grid, disregard the right pattern and extract the left pattern, copying it directly into the output."
+  ],
+  "196": [
+    "Pattern Replication in Colored Rows: To make the output, identify the pattern in each colored row and repeat it until the row is filled, replacing any black cells. The pattern starts from the first colored cell and continues in the original order. Black rows remain unchanged.",
+    "Pattern Replication Based on Specific Number of Cells: To make the output, identify the pattern in the first three (or four) colored cells of each row and repeat it until the row is filled, replacing any black cells. Black rows remain unchanged.",
+    "Pattern Replication in Specific Rows: To make the output, identify the pattern in specific rows (like the second row or rows with colored numbers) and repeat it until the row is filled, replacing any black cells. Black rows remain unchanged.",
+    "Pattern Replication Excluding Zeros: To make the output, identify the pattern of colored numbers (excluding zeros) in each row and repeat it until the row is filled, replacing the zeros. Black rows remain unchanged.",
+    "Pattern Replication in Numbered Squares: To make the output, mirror the pattern of the numbered squares in each row from the left to the right, filling up the black squares. Black rows remain unchanged.",
+    "Pattern Replication in Colored Bands: To make the output, identify the pattern in each colored band and repeat it until the band is filled, replacing any black cells. Black bands remain unchanged.",
+    "Pattern Replication in Colored Lines: To make the output, identify the pattern in each colored line and repeat it until the line is filled, replacing any black cells. Black lines remain unchanged.",
+    "Pattern Replication in Mirrored Fashion: To make the output, fill the half-filled color rows with another set of pattern repeating in a mirrored fashion. For example, if in the colored row, first 4 boxes are blue, orange, blue, orange and then followed by 4 black boxes, the 4 black boxes will be filled in a mirrored fashion of first 4 making it orange, blue, orange, blue."
+  ],
+  "203": [
+    "If a shape is located in the top half of the grid, fill its interior with color A, and if it's in the bottom half, fill it with color B. The outline of the shape remains unchanged.",
+    "Change the color of cells within the shape's boundary, excluding the boundary itself. The color change depends on the shape's position on the grid.",
+    "Change the color of cells that are surrounded on all sides by cells of the same color. The new color depends on the cell's position within the shape or on the grid.",
+    "Change the color of cells that are adjacent to the shape's boundary. The new color depends on the shape's position on the grid.",
+    "Change the color of cells that are located in the interior of the shape, excluding the cells on the shape's boundary. The new color depends on the shape's position on the grid.",
+    "Change the color of cells that are surrounded on all sides by cells of the same color and are located in the interior of the shape. The new color depends on the shape's position on the grid.",
+    "Change the color of cells that are surrounded on all sides by cells of the same color and are adjacent to the shape's boundary. The new color depends on the shape's position on the grid.",
+    "Change the color of cells that are located in the interior of the shape and are adjacent to the shape's boundary. The new color depends on the shape's position on the grid."
+  ],
+  "210": [
+    "To make the output, you have to generate a larger version of the input grid where each cell in the input is represented as a larger block in the output. The blocks in the output are a reflection, rotation, or mirror image of the input grid.",
+    "To make the output, you have to replicate the input grid multiple times in different directions. After that, mirror or reflect each block along a certain axis situated in the block.",
+    "To make the output, you have to repeat each row or cell of the input multiple times and expand each cell of the row into larger identical cells. This process is repeated multiple times to get the output grid.",
+    "To make the output, you have to position the cell in question in the middle of the larger squares in the output grid. Then, copy the cell value from the input to certain positions of the larger square in the output, and fill the remaining cells of the larger square with the opposite color or a mirror image.",
+    "To make the output, you have to replicate the input grid and mirror it diagonally. The mirrored grid is then combined with the original grid to form the output.",
+    "To make the output, you have to replace every colored square in the input with a larger square where only certain positions are colored and the rest is black. This pattern repeats multiple times vertically.",
+    "To make the output, you have to first expand the rows and columns of the input grid. This makes a cross shape with the same color and surrounding it with black cells. The output is a cross pattern of cells, with the color from the input cell.",
+    "To make the output, you have to replicate the input grid multiple times in different directions. After that, reflect each block symmetrically along a certain axis situated in the block."
+  ],
+  "213": [
+    "Mirroring/Reflecting Rules: To make the output, mirror the colored cells on one side of the grid across a central point or line, replacing the corresponding cells on the other side. The mirrored cells may be in reverse order and may exclude certain cells, such as black or grey cells.",
+    "Rotating Rules: To make the output, rotate or cycle the colored cells in a certain pattern, such as from left to right or top to bottom. The rotation may involve reversing the order of the cells and may exclude certain cells, such as black or grey cells.",
+    "Copying and Pasting Rules: To make the output, copy a set of colored cells and paste them into another section of the grid. The copied cells may be in reverse order and may replace certain cells, such as black or grey cells.",
+    "Replacing Rules: To make the output, replace certain cells, such as black or grey cells, with a set of colored cells. The replacing cells may be in reverse order and may come from a certain pattern or section of the grid.",
+    "Flipping Rules: To make the output, flip a set of colored cells in a certain pattern, such as from left to right or top to bottom. The flipping may involve reversing the order of the cells and may exclude certain cells, such as black or grey cells.",
+    "Swapping Rules: To make the output, swap certain cells, such as colored cells, with other cells. The swapping may involve reversing the order of the cells and may occur within a certain pattern or section of the grid.",
+    "Repeating Rules: To make the output, repeat a set of colored cells in a certain pattern, such as from left to right or top to bottom. The repeating may involve reversing the order of the cells and may exclude certain cells, such as black or grey cells.",
+    "Transposing Rules: To make the output, transpose a set of colored cells in a certain pattern, such as from left to right or top to bottom. The transposing may involve reversing the order of the cells and may exclude certain cells, such as black or grey cells."
+  ],
+  "221": [
+    "To make the output, identify and retain specific colors or numbers from the input grid, replacing all other cells with black. This includes single rows, vertical streaks, continuous lines, and specific blocks of the same color or number.",
+    "To make the output, identify the largest continuous block of the same color or number in the input grid. Retain this block in the output, replacing all other cells with black.",
+    "To make the output, retain only the rows where the majority of blocks (more than half) are of the same color or number (not including black). All other rows should be made black.",
+    "To make the output, identify specific shapes or patterns in the input grid, such as rectangles, squares, or lines of a certain length or orientation. Retain these shapes or patterns in the output, replacing all other cells with black.",
+    "To make the output, identify and retain cells or blocks in specific positions in the input grid, such as the center or a certain row or column. Replace all other cells with black.",
+    "To make the output, identify blocks of the same color or number that are surrounded by black in the input grid. Retain these blocks in the output, replacing all other cells with black.",
+    "To make the output, retain only those color blocks which have same colored blocks directly above and below them, while the rest of the grid becomes black.",
+    "To make the output, identify and retain specific sequences or repetitions of the same color or number in the input grid, such as a sequence of seven or more repeated numbers. Replace all other cells with black."
+  ],
+  "228": [
+    "If the center square's color or number appears elsewhere in the grid or differs from the corners, change those squares to grey (5) in the output grid, while keeping the other squares the same.",
+    "Replace specific numbers (such as 8, 1, or 2) with the number 5, unless they meet certain conditions (like being in the middle row, column, or surrounded by the same number).",
+    "If the cells in a row are not identical or if they differ from the corresponding cells in other rows, change those cells to grey (5) in the output grid. The rows or cells that meet the condition remain the same.",
+    "If a cell in a specific position (like the middle, border, or corner) differs from other cells in its row, column, or surrounding, change it to grey (5) in the output grid. The cells that meet the condition remain the same.",
+    "If a cell's color is different from a specific color (like the corner color, the color of the cells in the same row or column, or a specific color like blue or teal), change it to grey (5) in the output grid. The cells that meet the condition remain the same.",
+    "If a cell's color or number does not match with the cells in the same row or column, change it to grey (5) in the output grid. The cells that meet the condition remain the same.",
+    "If a cell is surrounded by cells of a different color or number, change it to grey (5) in the output grid. The cells that meet the condition remain the same.",
+    "Replace any color or number that is not the dominant color or number (does not fill most sectors) in the same row or column with grey (5). The dominant colors or numbers remain untouched."
+  ],
+  "232": [
+    "Unwrap each unit into a flattened array, starting from the top left and leaning towards the right. Repeat this process for every unit beneath each other and align their results vertically to generate the final output.",
+    "Compress the input block by 1/2. If more than half of the cells in a block are 0, then the corresponding cell in the output should be 2. If more than half of the cells in a block are colored differently from 2, then the corresponding cell in the output should be colored the same as the majority color.",
+    "Mirror the upper part of the input as the bottom part of the output. Then take the bordered square, trim off the border, and mirror it along the vertical axis. This mirrored square will form the upper part of the output.",
+    "Ignore the top, middle and bottom horizontal rows, start from the top-left of the large square, taking every second tile in the row to the edge of the square and then go down to the next row and repeat until you reach the bottom right corner of the square. Replace the colors in the square according to the pattern in the columns near the top and bottom of the input.",
+    "Take the lower square of the input, then each row of this square is reduced by taking the middle part of each row. After that, the colored parts of the upper square from input are duplicated in the reduced lower square of the output at the corresponding position.",
+    "Take every even-indexed (zero-indexed) row and column from only the red part of the input image to create a new smaller image containing the pixels of red and other colors along with the black pixels if any. This operation is a downsampling where you keep only the even-indexed pixels from the red area only while cropping out the rest.",
+    "Ignore the outermost layer of black cells in the input grid. Each larger square in the input map should be pared down into a single cell in the output such that this cell should take the color occurring most frequently in the larger square. In case of a tie, the color value should be chosen based on the order from lowest to highest color number conventions.",
+    "Remove the black boundaries of the input grid, resulting in a grid displaying a simplified representation of the \"digital clock\" number in the center and the small squares in the corners. The center square \"digit\" maintains the number of segments and the same layout in the output grid as in the input, and the corners are unchanged. The colors from the input are faithfully represented in the output."
+  ],
+  "233": [
+    "To make the output, you have to move a specific shape or pattern from one location to another, maintaining its original orientation and color. The space previously occupied by the moved shape or pattern is filled with black or another specified color.",
+    "To make the output, you have to remove a specific shape or pattern from the grid, leaving the space it occupied as black or another specified color. The rest of the grid remains unchanged.",
+    "To make the output, you have to replace a specific shape or pattern with another shape or pattern, maintaining the same location and orientation. The rest of the grid remains unchanged.",
+    "To make the output, you have to swap the colors of specific shapes or patterns in the grid. The shapes or patterns maintain their original location and orientation.",
+    "To make the output, you have to flip or rotate a specific shape or pattern in the grid. The flipped or rotated shape or pattern replaces the original shape or pattern, and the rest of the grid remains unchanged.",
+    "To make the output, you have to resize a specific shape or pattern in the grid. The resized shape or pattern replaces the original shape or pattern, and the rest of the grid remains unchanged.",
+    "To make the output, you have to merge specific shapes or patterns in the grid. The merged shape or pattern replaces the original shapes or patterns, and the rest of the grid remains unchanged.",
+    "To make the output, you have to perform specific color transformations on the grid. These transformations may involve changing the color of specific cells, replacing one color with another, or filling specific areas with a certain color. The rest of the grid remains unchanged."
+  ],
+  "247": [
+    "To make the output, you have to place a blue pixel in a zigzag pattern starting from the bottom left corner and going up. After reaching the top, reverse the direction and continue the zigzag pattern. The pattern resets from the bottom for each new grid.",
+    "To make the output, you have to follow a pattern of diagonal lines of blue squares that start at the bottom-left corner and move upwards. The pattern extends backward from the original blue square and repeats itself every N+1 row, where N is the number of squares in each row of the grid.",
+    "To make the output, you have to propagate the blue cell from the bottom upwards. When propagating, the blue cell should move to a different column in each subsequent row. It progresses from the last column to the first column in pattern looping around once it reaches the end.",
+    "To make the output, do the following steps: For each row, starting from the bottom, replace the black cell in the corresponding column with a blue cell and the rest should be filled with black cells. For every new row above, move the blue cell to the next column on the right. If it reaches the last column, the blue cell should return to the first column at the left on the new row above.",
+    "Starting from the blue cell, a diagonal swapping pattern of blue and black cells occurs vertically. The blue cell seems to \"bounce\" diagonally against the top and bottom of the grid. When it hits a wall, it bounces back. In other words, the blue cell follows a 'zig-zag' pattern up and down the grid until it reaches the right end.",
+    "To make the output, you have to replicate the pattern of a sequence of blue cells shifting to the right for each row starting from the bottom. If the end of the row is reached, the pattern starts back at the first cell on the left.",
+    "The transformation needs to flip a switch every time there is a black cell above a blue cell. Start from the bottom, and turn each cell to the right of the blue cell into blue. When the final cell in that row turns into blue, move to the row above and begin turning cells from the left, and continue this pattern till the top.",
+    "To make the output, you have to create a diagonal pattern of blue boxes moving from right to left starting from the bottom of the grid, alternating each box with black in between. Rest of the boxes should be black."
+  ],
+  "249": [
+    "To make the output, move each grey square towards the nearest red square or cluster. If there are multiple red squares or clusters, move the grey square towards the one in the same row or column. If no red square is present in the same row or column, the grey square should move to the center of the grid.",
+    "To make the output, move each grey square towards the center of the grid. If there are other colored squares in its path, the grey square should stop once it is adjacent to the colored square or they reach the middle of the grid. If there is no colored square in its path, the grey square should move to the center of the grid.",
+    "To make the output, move each grey square towards the nearest colored square in the direction of the red squares. When there is a colored square, move the closest grey square (if there is any) to the colored square adjacent to the red square such that the grey square is closer to the center of the grid.",
+    "To make the output, move each grey square to a specific position in relation to the red squares. The specific position can be adjacent to, in between, or at a certain distance from the red squares. The position of the red squares is fixed and doesn't move.",
+    "To make the output, move each grey square based on its own position. If the grey square is on the left, move it to the right. If the grey square is on the right, move it to the left. If the grey square is above, move it downwards. If the grey square is below, move it upwards.",
+    "To make the output, move each grey square to create a specific pattern. The pattern can be a line, a cross, a cluster, or any other specific arrangement. The pattern is determined by the positions of the red squares and the grey squares.",
+    "To make the output, move each grey square based on the presence of other grey squares. If there are multiple grey squares in the same row or column, they should all be moved to the central column or row. If there is only one grey square in the row or column, it should be moved to the center of the grid.",
+    "To make the output, move each grey square based on the presence of other colored squares. If there are multiple colored squares in the same row or column, the grey square should be moved to the rightmost or leftmost position. If there is only one colored square in the row or column, the grey square should be moved to the center of the grid."
+  ],
+  "250": [
+    "To make the output, change the color of all cells that are completely enclosed within the red cells to blue, while the other cells remain the same as in the input. If a cell is completely surrounded by red cells on all four sides (up, down, left, right), it should be turned blue. However, if there is a red cell within the enclosed area, it should remain red in the output.",
+    "To make the output, change the color of the interior spaces of the red shapes to blue, while maintaining the red border. The blue color is applied to parts of the red shapes that don't border black cells. If a cell is red and it has another red cell elsewhere in the same row or column, then turn this cell blue irrespective of its neighboring cells.",
+    "To make the output, replace all the black cells that are completely surrounded by red cells with a blue cell. A black cell is considered surrounded if the cells above, below, and on both sides of them (not diagonally) are red. The positions of the red cells don't change, and the black cells that are not surrounded by red cells remain the same.",
+    "To make the output, change the color of the interior cells of the red-colored shapes to blue, but leaving the cell representing the heart of the object as the original color. The cells containing the shapes which are directly adjacent to the boundaries remain as red.",
+    "To make the output, replace the interiors of specific shapes (like 'A', 'H', '8', etc.) with blue blocks while keeping their borders in red. Exception to this rule is the middle connecting block in 'H' and block in the center of 'A'. They remain red in output as well. Rest all black blocks stay as they are.",
+    "To make the output, change the color of the internal cells of the geometric shape from red to blue while keeping the external frame red unchanged. These 'internal' cells do not touch any black cells diagonally, they are surrounded by red cells on the top, bottom, left and right.",
+    "To make the output, change all the red cells that are surrounded by red cells on their top, bottom, left, and right side ( horizontally and vertically not diagonally) with blue. If the red cells on the edges and corners are not surrounded by red cells from all sides, they should not be replaced.",
+    "To make the output, replace every red cell that's located within the filled area of the red figure with a blue cell, without altering the red boundary of the figure. If the red figure is unsymmetric, the blue fill inside follows that shape without creating any reflection symmetry."
+  ],
+  "255": [
+    "Starting from the row with red cells, fill cells diagonally in a specific direction (upwards or downwards) with a designated color until a boundary or another colored cell is reached. The direction and color depend on the position relative to the red cells.",
+    "Starting from the row with red cells, create a gradient of colored cells above or below, with the number of colored cells in each row decreasing or increasing by one as you move away from the red cells.",
+    "Create a mirror image of the red cells or their properties in a specific direction (above, below, left, or right). The color and direction of the mirror image depend on the original position of the red cells.",
+    "Simulate a falling or rising effect for the red cells, with a different color filling the space left by the moving red cells.",
+    "Starting from a reference point (usually the red cells), create a triangle of colored cells pointing in a specific direction (upwards, downwards, left, or right).",
+    "Based on the position of the red cells, fill entire rows or columns with a specific color until a boundary or another colored cell is reached.",
+    "Replace the red squares with a specific color and fill in the squares around them in a specific pattern, usually based on the position or number of the red squares.",
+    "Based on the position or number of the red cells, create a specific pattern of colored cells, which can involve gradients, diagonals, mirrors, or other geometric shapes."
+  ],
+  "257": [
+    "To create the output, identify each row with blue cells. Starting from the first blue cell, change every second blue cell in the row to red. All other cells remain unchanged.",
+    "To create the output, identify each sequence of blue cells. Change the second blue cell in each sequence to red. All other cells remain unchanged.",
+    "To create the output, identify each blue cell that is followed by another blue cell. Change these identified blue cells to red. All other cells remain unchanged.",
+    "To create the output, identify each sequence of blue cells that is surrounded by black cells. Change the second blue cell in each sequence to red. All other cells remain unchanged.",
+    "To create the output, identify each blue cell that is followed by a black cell and then another blue cell. Change these identified blue cells to red. All other cells remain unchanged.",
+    "To create the output, identify each sequence of blue cells that is not surrounded by black cells. Change the second blue cell in each sequence to red. All other cells remain unchanged.",
+    "To create the output, identify each sequence of blue cells. Change the second blue cell in each sequence to red, regardless of whether the sequence is surrounded by black cells. All other cells remain unchanged.",
+    "To create the output, identify each blue cell that is followed by another blue cell, regardless of whether the sequence is surrounded by black cells. Change these identified blue cells to red. All other cells remain unchanged."
+  ],
+  "259": [
+    "Reflect all elements around the center point or axis of the grid, maintaining their original colors. If an element appears twice, it should appear twice in the output grid.",
+    "Mirror all diagonal lines in the grid, maintaining their original colors. If a diagonal line intersects with another line, the intersection should be mirrored as well.",
+    "Preserve the color of all elements during transformation. If an element changes color in the input, it should change to the same color in the output.",
+    "Ignore all grey cells during transformation. If a grey cell is present in the input, it should be treated as a black cell in the output."
+  ],
+  "265": [
+    "If the red cell is in the top row, change the color to green.",
+    "If the red cell is in the bottom row, change the color to yellow.",
+    "If the red cell is in the leftmost column, change the color to blue.",
+    "If the red cell is in the rightmost column, change the color to purple.",
+    "If the red cell is in the middle row, change the color to orange.",
+    "If the red cell is in the middle column,"
+  ],
+  "267": [
+    "To make the output, you have to create a yellow border around the colored shape, replacing black cells that are directly adjacent (horizontally, vertically, or diagonally) to any colored cell. The original colored shapes remain the same.",
+    "To make the output, you need to create a yellow pattern that mirrors or replicates the colored shape from the input grid. The originally colored cells from the input should remain the same color in the output.",
+    "To make the output, fill black cells with yellow based on their position or surrounding cells. This could be based on adjacency to colored cells, their position within a certain shape, or the number of colored cells surrounding them.",
+    "To make the output, create a yellow shape or pattern within the colored shape, such as a smaller square, concentric rectangles, or an inverted pattern.",
+    "To make the output, create a yellow diagonal or cross pattern across the grid, which may intersect with or avoid the colored shape.",
+    "To make the output, fill black cells with yellow based on their relation to the grid boundaries or colored shape boundaries. This could involve creating a larger shape around the colored shape, or filling cells that do not touch the grid or shape boundaries.",
+    "To make the output, create a specific yellow shape, such as a diamond, arrow, or cross, within the grid. The shape may be based on the position or shape of the colored cells.",
+    "To make the output, fill black cells with yellow based on a complex combination of conditions, such as their position relative to colored cells, their surrounding cells, or specific patterns or shapes within the grid."
+  ],
+  "268": [
+    "Magnification Rule: Each cell in the input grid is magnified into a 5x5 square in the output grid, maintaining their respective positions and colors. Black cells in the input grid are also magnified into 5x5 black squares in the output grid.",
+    "Expansion Rule: Each colored cell in the input grid expands to form a 5x5 square of the same color in the output grid. The relative positions are maintained. Black cells in the input expand to 5x5 black squares in the output.",
+    "Scaling Rule: The input grid is scaled up by a factor of five, where each cell in the input grid corresponds to a 5x5 segment in the output grid. Each segment will have all its cells with the same color as the corresponding cell in the input grid.",
+    "Replication Rule: Each cell in the input grid is replicated to a 5x5 square in the output grid positioned analogously to its position in the input grid. All zeros are retained during the process.",
+    "Transformation Rule: The transformation involves inflating each individual cell in the input grid into a 5x5 block of cells in the output grid, where each new cell in the block replicates the value (or color) of the corresponding cell in the input grid.",
+    "Enlargement Rule: The entire grid is enlarged by making each cell from the input grid into a 5x5 block of cells in the output grid. The color of the cells within each block should match their corresponding cells from the input grid. Empty(black) cells in the input remain as black cells in the output.",
+    "Upscaling Rule: The input grid is upscaled five times. Each square of the input grid becomes a 5x5 square on the output grid. A black square in the input grid is up-scaled to a 5x5 black square on the output, and colored squares are also up-scaled to 5x5 squares in the corresponding color.",
+    "Zoom-in Rule: Each cell in the input grid is expanded to a square in the output of size equal to the input cell's value. For example, an input cell with a value of 2 will become a 2x2 square in the output, all cells in the output square maintaining the original color of the input cell. The black cells in the input grid remain the same in the output increasing in size but not changing color."
+  ],
+  "273": [
+    "To create the output, identify the specific shape or pattern in the input grid. The position of teal cells within this shape or pattern determines the placement of teal cells in the output grid. If no teal cells are present within the shape or pattern, the corresponding cells in the output grid remain black.",
+    "To create the output, count the number of teal cells in specific rows or columns of the input grid. The count determines the placement of teal cells in the output grid. If no teal cells are present in the specified rows or columns, the corresponding cells in the output grid remain black.",
+    "To create the output, compress or condense the input grid into a 3x3 grid. The presence of specific colors or patterns in the input grid determines the color of the corresponding cells in the output grid.",
+    "To create the output, identify the cross or 'T' shape in the input grid. The position of teal cells within this shape determines the placement of teal cells in the output grid. If no teal cells are present within the shape, the corresponding cells in the output grid remain black.",
+    "To create the output, identify the rectangle or square shape in the input grid. The position of teal cells within this shape determines the placement of teal cells in the output grid. If no teal cells are present within the shape, the corresponding cells in the output grid remain black.",
+    "To create the output, identify the grey 'T' or 'H' shape in the input grid. The position of teal cells within this shape determines the placement of teal cells in the output grid. If no teal cells are present within the shape, the corresponding cells in the output grid remain black.",
+    "To create the output, identify the grey 'U' or 'I' shape in the input grid. The position of teal cells within this shape determines the placement of teal cells in the output grid. If no teal cells are present within the shape, the corresponding cells in the output grid remain black.",
+    "To create the output, identify the grey shape or pattern in the input grid. The presence of teal cells within this shape or pattern determines the placement of teal cells in the output grid. If no teal cells are present within the grey shape or pattern, the corresponding cells in the output grid remain black."
+  ],
+  "279": [],
+  "283": [
+    "To make the output, identify the colored symbols in the input and create a square around each symbol. The size of the square is determined by the symbol's position or the grid size, and the color of the square matches the color of the symbol. The square may be hollow or filled, and the symbol may remain in the center or become part of the square's border.",
+    "To make the output, identify the colored symbols in the input and create a diamond around each symbol. The size, orientation, and filling of the diamond are determined by the symbol's color, position, or the grid size. The diamond may be hollow or filled, and the symbol may remain in the center or become part of the diamond's border.",
+    "To make the output, identify the colored symbols in the input and create a cross or plus shape around each symbol. The size and filling of the shape are determined by the symbol's color or the grid size. The shape may be hollow or filled, and the symbol may remain in the center or become part of the shape's border.",
+    "To make the output, identify the colored symbols in the input and create a rectangle or box around each symbol. The size, orientation, and filling of the rectangle or box are determined by the symbol's position or the grid size. The rectangle or box may be hollow or filled, and the symbol may remain in the center or become part of the rectangle or box's border.",
+    "To make the output, identify the colored symbols in the input and create a specific pattern or shape around each symbol that is not a square, diamond, cross, or rectangle. The size, orientation, and filling of the pattern or shape are determined by the symbol's color, position, or the grid size.",
+    "To make the output, identify the colored symbols in the input and expand each symbol into a larger grid or patch. The size and filling of the grid or patch are determined by the symbol's color or the grid size. The grid or patch may contain other colors or shapes.",
+    "To make the output, identify the colored symbols in the input and transform each symbol into a different shape based on its color. The size, orientation, and filling of the shape are determined by the symbol's color, position, or the grid size.",
+    "To make the output, identify the colored symbols in the input and create a specific shape around each symbol based on its position in the grid. The size, orientation, and filling of the shape are determined by the symbol's position or the grid size. The shape may be hollow or filled, and the symbol may remain in the center or become part of the shape's border."
+  ],
+  "285": [
+    "Replace specific colors in the input grid based on their position or surrounding colors. This includes replacing colors based on their adjacency to other colors, their position within a pattern, or their location within the grid.",
+    "Identify specific color patterns in the input grid and replicate or continue these patterns in the output grid. This can involve repeating patterns within a shape, continuing a checkered pattern into adjacent shapes, or repeating a color sequence across the grid.",
+    "Cycle or rotate colors within a specific pattern or shape. This can involve rotating colors within a quadrant, cycling colors in a symmetrical pattern, or rotating rows of colors.",
+    "Reflect or rotate specific patterns or shapes within the grid. This can involve reflecting patterns over a diagonal line, rotating rows, or flipping shapes within a figure.",
+    "Replace colors in the input grid based on a specific sequence or pattern. This can involve replacing colors based on a sequence of colors in a row or column, or replacing colors based on a repeating sequence.",
+    "Replace colors in the input grid based on the colors that surround them. This can involve replacing colors that are surrounded by a specific color, or replacing colors based on the colors that are adjacent to them.",
+    "Overlay or bleed specific patterns onto the grid. This can involve copying a pattern into the output grid, bleeding a pattern into the next row, or overlaying a pattern onto the grid.",
+    "Replace colors in the input grid based on specific conditions. This can involve replacing colors if they are surrounded by a specific color, replacing colors if they are in a specific position, or replacing colors if they meet a specific condition."
+  ],
+  "287": [
+    "Mirroring Rule: Reflect the pattern, shape, or color configuration from the bottom half of the grid to the top half, maintaining the same orientation and color unless specified otherwise.",
+    "Color Transformation Rule: Change the color of certain cells based on the color of other cells in the grid, following the specific conditions and patterns given.",
+    "Symmetry Rule: Create a symmetrical pattern or shape in the grid, following the specific conditions and patterns given.",
+    "Reflection Rule: Reflect a pattern, shape, or color configuration from one part of the grid to another, maintaining the same orientation and color unless specified otherwise.",
+    "Extension Rule: Extend a shape or pattern in the grid based on certain conditions, maintaining the same orientation and color unless specified otherwise.",
+    "Filling Rule: Fill certain cells in the grid with a specific color or number, following the specific conditions and patterns given.",
+    "Replacement Rule: Replace certain cells in the grid with a specific color or number, following the specific conditions and patterns given.",
+    "Specific Pattern Rule: Create a specific pattern in the grid based on certain conditions, maintaining the same orientation and color unless specified otherwise."
+  ],
+  "289": [
+    "To make the output, identify the primary and secondary colors in the input grid. Transform the primary color to the secondary color and vice versa. If there are more than two colors, follow the specific transformation pattern given in the input.",
+    "To make the output, identify the colored shape in the input grid, excluding black cells. Resize this shape to fit the output grid, maintaining the original color pattern.",
+    "To make the output, identify the colored shape in the input grid. Invert the colors within this shape, swapping the color of the boundary with the color of the center.",
+    "To make the output, identify the color of a specific cell or cells in the input grid. Fill the output grid with this color, maintaining any unique colors in their original positions.",
+    "To make the output, identify the color of the border or corners of the colored shape in the input grid. Replace the color of the cells in the output grid with this color, maintaining the color of the center cell if it is unique.",
+    "To make the output, identify the color of the center cell of the colored shape in the input grid. Replace the color of the cells in the output grid with this color, maintaining the color of the border or corners if they are unique.",
+    "To make the output, identify and extract the colored shape from the input grid. Fill the output grid with the color of this shape, maintaining any unique colors in their original positions.",
+    "To make the output, identify and extract the colored shape from the input grid. Invert the colors within this shape, swapping the color of the boundary with the color of the center."
+  ],
+  "293": [
+    "Inner Transformation of Grey Blocks: For any grey block in the input grid, transform the interior cells to red, leaving a one-cell grey border intact. This applies to blocks of any shape and size, including squares, rectangles, and lines. If the block is less than 4 cells wide or high, it remains unchanged.",
+    "Specific Inner Transformation of Grey Blocks: For any grey block in the input grid, transform specific interior cells to red, based on their position within the block. This includes the second and third cells from the border, the middle three cells, or the second layer from the outer boundary.",
+    "Inner Transformation of Grey Rectangles: For any grey rectangle in the input grid, transform the interior cells to red, leaving a one-cell grey border intact. This applies to rectangles of any size. If the rectangle is less than 4 cells wide or high, it remains unchanged.",
+    "Specific Inner Transformation of Grey Rectangles: For any grey rectangle in the input grid, transform specific interior cells to red, based on their position within the rectangle. This includes the second and third cells from the border, the middle three cells, or the second layer from the outer boundary.",
+    "Inner Transformation of Grey Squares: For any grey square in the input grid, transform the interior cells to red, leaving a one-cell grey border intact. This applies to squares of any size. If the square is less than 4 cells wide or high, it remains unchanged.",
+    "Specific Inner Transformation of Grey Squares: For any grey square in the input grid, transform specific interior cells to red, based on their position within the square. This includes the second and third cells from the border, the middle three cells, or the second layer from the outer boundary.",
+    "Inner Transformation Based on Neighboring Cells: For any grey cell in the input grid, transform it to red if it is surrounded on all four sides (up, down, left, and right) by either grey or black cells.",
+    "Inner Transformation Based on Specific Conditions: For any grey block in the input grid, transform the interior cells to red based on specific conditions, such as the presence of a black cell border, the block taking up more than 50% of the grid, or the block being the second same color area from left to right or top to bottom."
+  ],
+  "297": [
+    "To create the output, swap the colors of the outermost and innermost squares from the input, while maintaining the color of the middle square.",
+    "To create the output, invert the colors of the entire input grid, replacing each color with a specific other color.",
+    "To create the output, swap the colors of the outermost and innermost squares from the input, with specific rules for handling black squares or cells.",
+    "To create the output, swap the colors of the outermost and innermost squares from the input, while maintaining the color of the second outermost square.",
+    "To create the output, swap the colors of the outermost and middle squares from the input, while maintaining the color of the innermost square.",
+    "To create the output, swap the colors of the outermost and innermost squares from the input, with specific rules for handling squares of a certain size.",
+    "To create the output, swap the colors of the outermost and innermost squares from the input, while maintaining the color of the second innermost square.",
+    "To create the output, swap the colors of the outermost and innermost squares from the input, with specific rules for handling squares of a certain position."
+  ],
+  "301": [
+    "For shapes or figures, change the color of cells based on their position within the shape or figure. If a cell is in the top half, change it to teal; if it's in the bottom half, change it to orange. If a cell is in the center, change it to fuchsia.",
+    "For shapes or figures, change the color of cells based on the orientation or direction of the shape or figure. If a shape or figure is oriented to the left, fill the central cells with a teal cell. If a shape or figure is oriented to the right, fill the central cells with an orange cell. For shapes or figures that have no clear orientation, replace the central cell with a fuchsia cell.",
+    "For any cell, change its color based on the surrounding cells. If a cell is surrounded by grey cells on all sides, change it to teal. If a cell is surrounded by grey cells on three sides, change it to orange. If a cell is surrounded by grey cells on two sides, change it to fuchsia.",
+    "For shapes or figures, change the color of cells based on the quadrant or location of the shape or figure in the grid. If a shape or figure is in the top-right quadrant, change the inner cells to teal. If a shape or figure is in the bottom-left quadrant, change the inner cells to orange.",
+    "For shapes or figures, change the color of cells based on the presence of specific cells or patterns within the shape or figure. If a shape or figure contains a smaller square within its four corners, change the color of that inner square to teal. If a shape or figure contains a smaller rectangle within its four corners, change the color of that inner rectangle to orange.",
+    "For shapes or figures, change the color of cells based on the size or dimensions of the shape or figure. If a shape or figure is a 1x1 square, change the color of the cell to teal. If a shape or figure is a 3x3 square, change the color of the cells to orange.",
+    "For shapes or figures, change the color of cells based on the symmetry or asymmetry of the shape or figure. If a shape or figure is symmetrical, change the color of the cells to teal. If a shape or figure is asymmetrical, change the color of the cells to orange.",
+    "For shapes or figures with specific characteristics (e.g., letters, numbers, etc.), change the color of cells based on these characteristics. If a shape or figure is a letter, change the color of the cells to teal. If a shape or figure is a number, change the color of the cells to orange."
+  ],
+  "305": [
+    "To generate the output, mirror the top half of the input grid (above the yellow line) onto the bottom half (below the yellow line), using the yellow line as the axis of reflection.",
+    "Any existing elements below the yellow line in the input grid are replaced by the mirrored elements from the top half.",
+    "The yellow line remains unchanged.",
+    "The mirrored elements maintain their original colors and relative positions.",
+    "Any cells in the bottom half of the output grid that do not correspond to a cell from the top half of the input grid remain black."
+  ],
+  "307": [
+    "To make the output, you have to scale down the input grid by skipping a certain number of rows and columns, starting from a specific row and column. The new grid maintains the colors and patterns of the original grid.",
+    "To make the output, you have to divide the input grid into equally smaller squares, each one maintaining the colors and patterns of the larger grid. The colors on the edges and center should correspond to the color of the dots in the larger grid.",
+    "To make the output, you have to take the middle cells of the two horizontal and vertical lines and place them in the same position in the output. Any other color in the array is converted to the major color in the array.",
+    "To make the output, you need to first identify the cells of any color other than a specific color in the input grid. These cells will form a smaller grid within the overall input grid. Transfer these cells and their colors exactly to the corresponding positions in the output grid. All other cells in the output grid should be the specific color.",
+    "To make the output, you have to reduce the grid based on a specific pattern. The result is a reduced grid in which every cell corresponds to a specific pattern in the input grid.",
+    "To make the output, you should extract the locations of the dots/spots of other colors from the input and represent them by their respective colors in the output, where the rest of the grid remains the same color as the main background color in the input. The relative position of these spots should remain the same in the output.",
+    "To make the output, you have to find the foremost and the farthest instance of each colored pixel in the input grid and build a new grid covering all these points. Replace the numbers from input grid to the output grid at corresponding positions but replace all other areas with a specific color.",
+    "To make the output, you have to shrink the input grid by taking every nth cell/number in both directions, starting from a specific row and column. Any cell X in the output is the cell at (n*X_row, n*X_column) in the input."
+  ],
+  "313": [
+    "Mirror the colors or values from a specified part of the grid onto another specified part, maintaining the original orientation and position relative to a specified axis or point.",
+    "Replace a specified color in the grid with another color based on certain conditions, such as the color of another cell or the presence of a color in a certain part of the grid.",
+    "Copy colors or values from one part of the grid to another, maintaining the original orientation and position.",
+    "Perform operations on individual quadrants of the grid, such as mirroring, color replacement, or copying.",
+    "Perform operations on individual rows of the grid, such as mirroring, color replacement, or copying.",
+    "Perform operations on individual columns of the grid, such as mirroring, color replacement, or copying.",
+    "Perform operations on the diagonals of the grid, such as color replacement or copying.",
+    "Perform operations involving the center of the grid, such as mirroring, color replacement, or copying."
+  ],
+  "316": [
+    "To make the output, identify the rows containing grey cells in the input. Fill the corresponding rows in the output grid with blue cells, regardless of the number of grey cells in each row.",
+    "To make the output, divide the grid into equal parts (either horizontally or vertically) and fill the corresponding parts in the output grid with blue cells if there is at least one grey cell in that part of the input grid.",
+    "To make the output, identify the location of each grey cell in the input. For each grey cell, fill a specific area around it (which could be a row, column, or a 3x3 square) with blue cells in the output grid.",
+    "To make the output, divide the grid into 3x3 sections. For each section that contains at least one grey cell in the input, fill the corresponding section in the output grid with blue cells.",
+    "To make the output, for each row, count the number of grey cells and color an equivalent number of cells in the output grid with blue, starting from the left.",
+    "To make the output, identify the relative position of each grey cell in the input (such as leftmost, rightmost, or in a specific quadrant). Fill a specific area in the output grid with blue cells based on this position.",
+    "To make the output, divide the grid into sections based on the position of grey cells in the input. Fill the corresponding sections in the output grid with blue cells.",
+    "To make the output, divide the grid into equal parts both horizontally and vertically. Fill the corresponding parts in the output grid with blue cells if there is at least one grey cell in that part of the input grid."
+  ],
+  "320": [
+    "To make the output, replace cells in specific positions or colors in the input with colors from corresponding positions in other sections or columns, and replace certain colors with others based on their location.",
+    "To make the output, select specific columns or rows from the input, possibly with some transformation or replacement of cells.",
+    "To make the output, compare cells in different sections or columns of the input and determine the output based on their similarities or differences.",
+    "To make the output, transform cells based on the number or color of cells in different sections or columns of the input, possibly involving some form of counting or comparison.",
+    "To make the output, select or transform cells based on their position in a specific pattern or sequence in the input, possibly involving some form of rotation or flipping.",
+    "To make the output, transform cells based on the color or number of cells in a specific pattern or sequence in the input, possibly involving some form of counting or comparison.",
+    "To make the output, transform or replace cells based on the color or number of cells in the same row or column of the input, possibly involving some form of counting or comparison.",
+    "To make the output, transform or replace cells based on the color or number of cells in a specific pattern or sequence in the input, possibly involving some form of counting or comparison."
+  ],
+  "321": [
+    "To make the output, fill each column's black cells with the color of the topmost non-black cell in that column. If the column is all black, keep it as is.",
+    "To make the output, fill each row's black cells with the color of the leftmost non-black cell in that row. If the row is all black, keep it as is.",
+    "To make the output, fill the black cells below each diagonal cell with the color of the diagonal cell. If there is no colored cell on the diagonal, keep it as is.",
+    "To make the output, fill the black cells with the color of the cell in a specific position (e.g., first row, first column). If there is no colored cell in the specific position, keep it as is.",
+    "To make the output, fill the black cells below each colored cell with the color of the cell above, as if the color is dripping down to fill the black cells below the colored cell in the same column.",
+    "To make the output, fill each row's black cells with the color of the first non-black cell encountered in that row. If a row consists of only black cells, copy the colored cells from the row just above it.",
+    "To make the output, fill each column's black cells with the color of the first non-black cell encountered in that column. If a column consists of only black cells, keep it as is.",
+    "To make the output, fill the black cells based on specific patterns such as flipping the grid, filling in the cells diagonally from left to right, or filling in the cells vertically down from the colored cells."
+  ],
+  "324": [],
+  "329": [
+    "If a grey block or shape is located in a specific region or position within the grid, it is colored accordingly. The regions can be defined by rows, columns, quadrants, or other spatial divisions. If a block or shape spans multiple regions, the region with the most coverage or a specific priority order is used.",
+    "Grey blocks or shapes are grouped based on their adjacency, orientation, or other shared characteristics. Each group is then colored based on its size, order of appearance, or other group-specific properties.",
+    "Grey blocks or shapes are colored based on the specific shape they form, such as lines, squares, or letters. The orientation, size, or other shape-specific properties can also influence the color.",
+    "Grey blocks or shapes are colored based on the count of grey blocks within a certain region, sequence, or group. The count can be reset or repeated based on specific conditions.",
+    "Grey blocks or shapes are colored based on the specific pattern they form or are part of. The pattern can be a number, letter, or other recognizable form.",
+    "Grey blocks or shapes are colored based on their proximity or adjacency to the edge or border of the grid. The specific edge (top, bottom, left, right) can influence the color.",
+    "Grey blocks or shapes are colored in an alternating sequence. The sequence can be based on the order of appearance, position, or other properties.",
+    "The grid is divided into sections or quadrants, and grey blocks or shapes are colored based on the section they are in. The division can be horizontal, vertical, or both."
+  ],
+  "335": [
+    "If a grey shape is present, fill its interior with teal. Add a vertical teal line that starts from the center of the shape and extends in a specified direction (upwards, downwards, or both) until it hits the edge of the grid or another grey cell.",
+    "Fill the interior of a grey shape with teal. Add a teal line in the middle of the grid, the direction and position of which depends on the location of the grey shape (top, bottom, or center).",
+    "Fill the interior of a grey shape with teal. Add a vertical teal line outside the shape, in the middle column of the grid, extending from the top to the bottom of the grid.",
+    "Fill the interior of a grey shape with teal. Add a teal line based on specific characteristics of the shape (e.g., the open side of a \"C\" shape, the center of an \"H\" shape).",
+    "Fill the interior of a grey shape with teal. Add a teal line in the middle of the grid, the length of which depends on the size of the grey shape.",
+    "Fill the interior of a grey shape with teal. Add a teal line in the middle of the grid, the position of which depends on specific characteristics of the grid (e.g., the center of the grid, the third row from the top).",
+    "Fill the interior of a grey shape with teal. Add a teal line based on the orientation of the shape (e.g., if the shape is rotated, reflected, or if it's a specific letter).",
+    "Fill the interior of a grey shape with teal. Add a teal line in the middle of the grid, the position and direction of which depends on both the position of the grey shape and specific characteristics of the grid."
+  ],
+  "336": [
+    "Swapping Rows: The transformation involves switching the colors represented by the numbers in the second and third rows while the rest of the grid remains the same.",
+    "Swapping Rows: To make the output, you have to swap the second row and the third row while keeping the first row unchanged.",
+    "Swapping Rows: To make the output, you have to swap the colors in the top and center row of cells. Leave the bottom row of cells as they are.",
+    "Swapping Rows: The transformation from the input grid to the output grid involves swapping two specific rows. More specifically, the second and the third row are switched places.",
+    "Swapping Rows: To make the output from the input, you have to replace the second row with the first row, and replace the first row with the second one. Essentially, it's about swapping the first two rows of the grid. The order of the elements in the swapped rows remains the same and the last row remains unchanged.",
+    "Swapping Columns: To make the output, you have to switch the values in the second row and the second column, excluding the center value if the grid is odd-sized. For even-sized grids, simply switch the entire second row with the second column.",
+    "Swapping Columns: To make the output, you have to switch the second and third columns of all rows in the input grid. This means you would take the numbers from the second column and move them to the third, and the numbers from the third column move to the second. Only the numbers in the second and third columns are switched, all other numbers stay in their original positions.",
+    "Swapping Columns: To make the output, you have to swap the color of the second row and second column. Replacing all numbers in the second row with their corresponding numbers in the second column of the input array and vice versa. All other numbers remain the same.",
+    "Swapping Columns: To make the output, you have to exchange the numbers in the middle column with the numbers in the leftmost column. If the row size isn't 3, then maintain the same grid.",
+    "Swapping Columns: The transformation of the grid is based on a diagonally-symmetric swapping operation. The first column of the grid is swapped with the third column, leaving the center (second) column and the diagonally-symmetric elements in the first and third column of each row unaltered. This operation is equivalent to folding the grid about its vertical middle axis.",
+    "Swapping Columns: To make the output, swap the second column with the last column of the grid. The rest of the cells in the grid remain as they are in the input.",
+    "Replacing Specific Numbers: To make the output, you have to replace certain numbers (representing colors) in the input grid by other numbers from the same grid. Specifically, the number 5 needs to be replaced by the number to its right (if there is one), and the number 8 needs to be replaced by the number to its left (if there is one). All other numbers stay the same.",
+    "Replacing Specific Numbers: The rule is to replace the first number 5 after the diagonal, going line by line from top-left to bottom-right, with number 8. If there is no number 5 after diagonal, leave the line as is. If there are more than one number 5 after the diagonal, only the first one is replaced.",
+    "Replacing Based on Frequency: To make the output, look at each column of the input grid, and identify the color-coded number that appears most frequently in a column. Replace the color-coded number in the center of that column with the most frequently appearing number. If there is no center (the column has an even number of boxes), replace the upper-middle box of that column. If there is no most frequent number (all numbers appear the same amount of times), keep the original center number.",
+    "Replacing Based on Frequency: The pattern defined by the transformation involves replacing certain cells. In each section/column of the grid, there are cells that share the same colour. To make the output, you have to find if there is a common colour in each column and replace all other colours in the column with the most common one. If there is no most common colour (i.e. all colours are only represented once), then the column remains the same.",
+    "Replacing Based on Frequency: In each column, the color that appears most frequently is identified. Then, the cell in the central row of that column is colored with the most frequent color of that column. If there's a tie in the frequency, use the color of the cell in the central row in the input.",
+    "Replacing Based on Frequency: To convert from the input to the output grid, find the color that appears most in the original grid (if there are multiple"
+  ],
+  "346": [
+    "If at least one cell from the yellow square and one cell from the green square vertically align, the whole corresponding row in the output is transformed into a fuchsia square. Otherwise, the cells stay black.",
+    "For each pair of squares in the input, if the yellow square is on the left and the green square is on the right, convert the pair into a fuchsia square. If the pair is not matching, it should become black.",
+    "Divide each row into segments, such that each segment consists of three cells. If there is at least one cell that is yellow and one cell that is green in each segment, then replace the entire segment with fuchsia. Otherwise, replace the segment with black.",
+    "Divide the grid into 3x2 sections from left to right. Each section needs to be replaced by a single cell in the output. This cell should be coloured fuchsia if there is overlap between the yellow and green shapes in a certain section, otherwise it should be left blank.",
+    "Divide the input grid into two equal parts vertically. If there are yellow cells on both sides of the vertical split for a given row, make the corresponding cell in the output grid fuchsia. If there is no yellow cell in a row, leave the corresponding cell in the output grid black.",
+    "Compare each yellow cell of the left 3x3 grid with the corresponding green cell in the right 3x3 grid. If either of the cell is colored (not black), paint the same cell in a new 3x3 grid with fuchsia. If both the cells are black, leave it black.",
+    "Split the input grid into left and right halves. If a cell in the left half of the grid matches the corresponding cell in the right half, color it fuchsia; otherwise, color it black.",
+    "Divide the input grid into pairs of columns from left to right. If at least one yellow box is present in a pair of column, put a fuchsia box in the corresponding position in the output. Otherwise, copy over what's in the right column of each pair to the corresponding cell in the output."
+  ],
+  "351": [
+    "To make the output, you have to fill in the black cells that are horizontally or vertically adjacent to any colored cell with blue. The original colored cells and any black cells not adjacent to a colored cell should remain the same.",
+    "To make the output, you have to fill in the black cells that are adjacent (horizontally, vertically, and diagonally) to any colored cell with blue. The original colored cells and any black cells not adjacent to a colored cell should remain the same.",
+    "To make the output, you have to fill in the black cells that are adjacent to any colored cell with blue, following specific conditions or exceptions related to the position or color of the cells. The original colored cells and any black cells not adjacent to a colored cell should remain the same.",
+    "To make the output, you have to fill in the black cells that are adjacent to any colored cell with blue, visualizing this process as the spreading or influence of the colored cells to their immediate neighboring cells. The original colored cells and any black cells not adjacent to a colored cell should remain the same.",
+    "To make the output, you have to fill in the black cells that are adjacent to any colored cell with blue, while maintaining the original color of the colored cells. Any black cells not adjacent to a colored cell should remain the same.",
+    "To make the output, you have to fill in the black cells that are adjacent to any colored cell with blue, while keeping the grid the same size or shape as the input. The original colored cells and any black cells not adjacent to a colored cell should remain the same.",
+    "To make the output, you have to fill in the black cells that are adjacent to any colored cell with blue, focusing on the transformation of black cells. The original colored cells and any black cells not adjacent to a colored cell should remain the same.",
+    "To make the output, you have to fill in the black cells that are adjacent to any colored cell with blue, focusing on the row or column of the colored cells. The original colored cells and any black cells not adjacent to a colored cell should remain the same."
+  ],
+  "355": [
+    "Connect teal elements in a straight line, either horizontally or vertically, without any specific direction.",
+    "Create a rectangle or square shape by connecting teal elements.",
+    "Connect teal elements in a straight line, either horizontally or vertically, from left to right or top to bottom.",
+    "Connect teal elements in a straight line, either horizontally or vertically, and fill in the spaces between them.",
+    "Connect teal elements in a straight line, either horizontally or vertically, and extend the line to the edge of the grid or until it hits another teal element.",
+    "Connect teal elements in a straight line, either horizontally or vertically, and create a cross or T-like formation.",
+    "Connect teal elements in a straight line, either horizontally or vertically, and avoid intersections or cross junctions.",
+    "Connect teal elements in a straight line, either horizontally or vertically, and fill in the entire row or column."
+  ],
+  "357": [
+    "To make the output, identify the sequence of colors and shift or rotate it in a specified direction. The sequence should be replicated in the rows or columns adjacent to it, creating a parallel sequence.",
+    "To make the output, identify the sequence of colors and mirror or reflect it in a specified direction. The mirrored sequence should be replicated in the rows or columns adjacent to it, creating a parallel sequence.",
+    "To make the output, identify the sequence of colors and repeat it horizontally across the grid. The sequence should be replicated in the rows or columns adjacent to it, creating a parallel sequence.",
+    "To make the output, identify the sequence of colors and repeat it vertically across the grid. The sequence should be replicated in the rows or columns adjacent to it, creating a parallel sequence.",
+    "To make the output, identify the sequence of colors and mirror it both horizontally and vertically. The mirrored sequence should be replicated in the rows or columns adjacent to it, creating a parallel sequence.",
+    "To make the output, identify the sequence of colors and repeat it both horizontally and vertically across the grid. The sequence should be replicated in the rows or columns adjacent to it, creating a parallel sequence.",
+    "To make the output, identify the sequence of colors and apply a combination of shifting, rotating, and repeating it in a specified direction. The sequence should be replicated in the rows or columns adjacent to it, creating a parallel sequence.",
+    "To make the output, identify the sequence of colors and apply a combination of mirroring, reflecting, and repeating it in a specified direction. The sequence should be replicated in the rows or columns adjacent to it, creating a parallel sequence."
+  ],
+  "359": [
+    "To make the output, remove the right side of the grid and the grey line, leaving only the left side of the grid intact.",
+    "To make the output, remove the right side of the grid and the grey line, then shift the remaining left side to fill the grid.",
+    "To make the output, remove the right side of the grid and mirror the left side to fill the grid.",
+    "To make the output, remove the right side of the grid and extract specific columns from the left side to fill the grid.",
+    "To make the output, remove the right side of the grid and rotate the remaining part to fill the grid.",
+    "To make the output, remove the right side of the grid and extract specific cells from the left side to fill the grid.",
+    "To make the output, remove the grey line and replace specific cells to fill the grid.",
+    "To make the output, remove the grey line and the right side of the grid, and replace specific cells to fill the grid."
+  ],
+  "361": [
+    "Rotate the entire grid 90 degrees in a specified direction. The vertical colored line becomes horizontal and the horizontal colored line becomes vertical. Grey cells, if present, may or may not be included in the rotation.",
+    "Shift the entire colored line (vertical or horizontal) to a specified position in the grid. All other cells turn to black.",
+    "Swap the positions of the vertical and horizontal colored lines. The vertical line from a specified column moves to a specified row, and any colored horizontal line moves to a specified column. All other parts of the grid remain black.",
+    "Flip the entire grid either vertically or horizontally. The position of the colored cells within each row or column changes accordingly. Grey cells, if present, may or may not be included in the flip.",
+    "Move the colored lines to specific positions in the grid. The vertical colored line is moved to a specified column from the left and the colored horizontal line is moved to a specified place from the top. Grey cells, if present, are ignored.",
+    "Rotate the specified shape (like 'T') 90 degrees in a specified direction. The position of the grey box, if present, changes accordingly.",
+    "Ignore or remove certain cells (like grey cells) in the transformation. The remaining colored lines (vertical or horizontal) are moved or rotated as specified.",
+    "Perform complex transformations like mirroring the grid horizontally and then moving the colored lines to specified positions. The color of the cells remains the same between the input and output."
+  ],
+  "362": [
+    "Rules involving color changes based on position relative to other colors: To make the output, identify cells of a specific color that are adjacent (horizontally, vertically, or diagonally) to cells of another color. Change the color of these identified cells to a third color. All other cells remain unchanged.",
+    "Rules involving color changes based on position in the grid: To make the output, identify cells in a specific region of the grid (e.g., top half, bottom half, specific row or column). Change the color of these identified cells to a different color. All other cells remain unchanged.",
+    "Rules involving color changes based on patterns or sequences: To make the output, identify cells that are part of a specific pattern or sequence (e.g., a row with a certain number of a specific color, a sequence of colors). Change the color of these identified cells to a different color. All other cells remain unchanged.",
+    "Rules involving color changes based on specific conditions: To make the output, identify cells that meet specific conditions (e.g., a cell of a certain color in a specific position, a cell adjacent to a cell of a certain color). Change the color of these identified cells to a different color. All other cells remain unchanged.",
+    "Rules involving color changes based on the presence of a specific color: To make the output, identify cells of a specific color. Change the color of these identified cells or cells in relation to these identified cells to a different color. All other cells remain unchanged.",
+    "Rules involving color changes based on the presence of a specific shape or structure: To make the output, identify cells that are part of a specific shape or structure (e.g., a line, a square). Change the color of these identified cells to a different color. All other cells remain unchanged.",
+    "Rules involving color changes based on the presence of a specific number: To make the output, identify cells that contain a specific number. Change the color of these identified cells or cells in relation to these identified cells to a different color. All other cells remain unchanged.",
+    "Rules involving color changes based on the presence of a specific color in a specific row or column: To make the output, identify cells in a specific row or column that contain a specific color. Change the color of these identified cells or cells in relation to these identified cells to a different color. All other cells remain unchanged."
+  ],
+  "370": [
+    "To make the output, identify the blue cells in the input grid. For each blue cell, create a green cross centered on the blue cell. The length of the cross's arms should be determined by the shortest distance from the blue cell to the grid boundary, either horizontally or vertically. The blue cells remain in their original positions in the output grid. All other cells remain black.",
+    "To make the output, identify the blue cells in the input grid. For each blue cell, create a green diamond centered on the blue cell. The size of the diamond should be determined by the shortest distance from the blue cell to the grid boundary, either horizontally or vertically. The blue cells remain in their original positions in the output grid. All other cells remain black.",
+    "To make the output, identify the blue cells in the input grid. For each blue cell, create a green square centered on the blue cell. The size of the square should be determined by the shortest distance from the blue cell to the grid boundary, either horizontally or vertically. The blue cells remain in their original positions in the output grid. All other cells remain black.",
+    "To make the output, identify the blue cells in the input grid. For each pair of blue cells, create a green line connecting them. The line should be drawn in the shortest path possible, either vertically, horizontally, or diagonally. The blue cells remain in their original positions in the output grid. All other cells remain black.",
+    "To make the output, identify the blue cells in the input grid. For each blue cell, create a green shape around it, replacing black cells it encounters. The shape should be determined by the shortest distance from the blue cell to the grid boundary, either horizontally or vertically. The blue cells remain in their original positions in the output grid. All other cells remain black.",
+    "To make the output, identify the blue cells in the input grid. For each blue cell, create a green shape around it, without replacing other colored cells. The shape should be determined by the shortest distance from the blue cell to the grid boundary, either horizontally or vertically. The blue cells remain in their original positions in the output grid. All other cells remain black.",
+    "To make the output, identify the blue cells in the input grid. Create a green shape centered on the mean position of the blue cells. The shape should be determined by the shortest distance from the mean position to the grid boundary, either horizontally or vertically. The blue cells remain in their original positions in the output grid. All other cells remain black.",
+    "To make the output, identify the blue cells in the input grid. Create a green shape that is symmetrically located between the blue cells. The shape should be determined by the shortest distance from the midpoint between the blue cells to the grid boundary, either horizontally or vertically. The blue cells remain in their original positions in the output grid. All other cells remain black."
+  ],
+  "377": [
+    "Pattern or shape identification: Identify specific patterns or shapes in the input grid and recreate them in the output grid. The identification and recreation of patterns or shapes are determined by the input pattern.",
+    "Color selection or identification: Select or identify specific colors in the input grid and apply them to the corresponding elements in the output grid. The selection or identification of colors is determined by the input pattern."
+  ],
+  "381": [
+    "To make the output, shift each teal cell to the right until it hits a red cell or the edge of the grid. The shift increases by one step for each subsequent row.",
+    "To make the output, replicate or spread the teal cells in a specific pattern, which can be horizontal, vertical, or diagonal, until they hit a red cell or the edge of the grid. The pattern may involve cycles or specific intervals.",
+    "To make the output, move the teal cells in relation to the red cells, either down, up, or towards the center, until they hit a red cell or the edge of the grid.",
+    "To make the output, rotate or translate the teal cells in a specific pattern, which can be clockwise, counterclockwise, or diagonal. The rotation or translation may involve specific intervals or cycles.",
+    "To make the output, create new teal cells or patterns based on the position of existing teal cells. The new cells or patterns can be in the same row, column, or in a specific pattern.",
+    "To make the output, shift the teal cells to the left or right in a cyclic or repeating pattern. The shift may involve specific intervals or cycles.",
+    "To make the output, change the position of teal cells based on their position in the grid or in relation to other cells. The new position can be in the same row, column, or in a specific pattern.",
+    "To make the output, create specific shapes or patterns with teal cells. The shapes or patterns can be squares, lines, or other geometric shapes."
+  ],
+  "385": [
+    "To make the output, compare the number of colored cells in two sections of the input grid. If one section has more colored cells, mark the corresponding cell in the output as green. If both sections have an equal number of colored cells, mark the corresponding cell in the output as black.",
+    "To make the output, compare the colors of corresponding cells in two sections of the input grid. If the colors match, mark the corresponding cell in the output as black. If the colors do not match, mark the corresponding cell in the output as green.",
+    "To make the output, compare the positions of colored cells in two sections of the input grid. If the positions match, mark the corresponding cell in the output as black. If the positions do not match, mark the corresponding cell in the output as green.",
+    "To make the output, compare the colors of cells in a single section of the input grid. If all cells are the same color, mark the corresponding cell in the output as black. If the cells are different colors, mark the corresponding cell in the output as green.",
+    "To make the output, compare the colors of cells in a single row of the input grid. If all cells are the same color, mark the corresponding cell in the output as black. If the cells are different colors, mark the corresponding cell in the output as green.",
+    "To make the output, compare the colors of cells in a single column of the input grid. If all cells are the same color, mark the corresponding cell in the output as black. If the cells are different colors, mark the corresponding cell in the output as green.",
+    "To make the output, compare the colors of cells in a 2x2 or 3x3 square of the input grid. If all cells are the same color, mark the corresponding cell in the output as black. If the cells are different colors, mark the corresponding cell in the output as green.",
+    "To make the output, convert the colors of cells in the input grid to binary or decimal values. If the value is even, mark the corresponding cell in the output as black. If the value is odd, mark the corresponding cell in the output as green."
+  ],
+  "390": [
+    "Identify the unique color or pattern in each row or column of the input grid. The output for each row or column is the unique color or pattern, represented by its corresponding number.",
+    "Count or identify the specific colors in certain positions or sequences in the input grid. The output for each position or sequence is the count or identified color, represented by its corresponding number.",
+    "Identify the colors that do not appear in certain positions or sequences in the input grid. The output for each position or sequence is the color that does not appear, represented by its corresponding number.",
+    "Identify the colors that appear in a specific order or sequence in the input grid. The output for each order or sequence is the color that appears, represented by its corresponding number.",
+    "Identify the colors that are surrounded or enclosed by other colors in the input grid. The output for each surrounded or enclosed color is the color itself, represented by its corresponding number.",
+    "Identify the colors that appear in the middle of a sequence or pattern in the input grid. The output for each middle color is the color itself, represented by its corresponding number.",
+    "Identify the colors that appear in specific sections or groups in the input grid. The output for each section or group is the color that appears, represented by its corresponding number.",
+    "Identify the colors that are different from a certain color or pattern in the input grid. The output for each different color is the color itself, represented by its corresponding number."
+  ],
+  "397": [
+    "To make the output, you have to diagonally mimic the pattern in the input grid across the output grid where black boxes in the input grid are represented as zeroes(0) in the output, and numbers from the input grid take their respective position in the output grid diagonally moving along from top right to bottom left.",
+    "To make the output, you need to position the colored squares in the input diagonally on the output grid. Start from the bottom left and move towards the upper right. All other squares should be colored black.",
+    "To make the output, first count the number of colored cells in the input, overall giving you a count of N. The output grid will become a N * N square grid. The colored pixels in the input are mapped to an anti-diagonal line in the output from bottom-left to top-right, with the same color sequence from left to right in the input. Each colored pixel is placed on its own column with black cells padding the spaces, keeping the color progression from bottom to top. Black cells in the input are ignored.",
+    "To transform the input into the output, create a diagonal line from the top right to the bottom left of the output grid. The line should start with the first number of the input, continue with the second number, and so forth. The rest of the output grid should remain black. The non-zero numbers from the input should map directly to the corresponding colors in the output.",
+    "To transform the input to the output, start by measuring the amount of colored boxes on the input row. Multiply that number by three to get the size of the output grid. Then, in the output, create the same diagonal pattern observed in the examples using the same colors as in the input, starting from the bottom left corner and going up to the top right. Each colored box occupies a diagonal line in output grid. The black boxes in input doesn't make any changes in output.",
+    "To make the output, from the input row, transform each element, preserving its value, into a diagonal from lower left to upper right, starting at the bottom for the first non-zero leftmost element and shifting upwards for subsequent elements. It\u2019s like having a mirror along the upward diagonal of the square. All other cells in the grid that are not part of these diagonals should be black.",
+    "To make the output, starting from the bottom left, the color above the previous is filled in the output square if the current input square is not black. This pattern should progress diagonally up to the right and fill any black spaces with black. This process should continue for each input color until the output grid is complete.",
+    "To make the output, you have to draw a diagonal line from the right-uppermost cell to the left-bottommost cell using the sequence of colors from the input row, with all other cells being black. The diagonal starts with the leftmost color of the input and ends with the rightmost color of the input.",
+    "The transformation involves taking each non-black colored box in the sequence and placing it diagonally in the output grid from bottom left to top right. This process should be repeated for each non-black box in the sequence, and the placement of the boxes in the output grid should start at the bottom left corner and move diagonally to the top right. Black boxes from the sequence do",
+    "Take the non-black cells from the input (in their input order) and lay them out diagonally from the top right to the bottom left of the output grid. All other cells in the output grid should be black. The color of the diagonal cells should be the same as in the input.",
+    "To make the output, lay out each colored dot diagonally from the top right to the bottom left of the expanded square. Ensure that you maintain the order of the colors from the input. Fill any remaining cells in the grid in the output with black.",
+    "To make the output, you have to create a diagonal line of cells from the top-right of the grid to the bottom-left where the color of each cell in the line is determined by the corresponding number in the input sequence. If the corresponding number is 0 (black), the cell should be black. If a cell is not part of the diagonal line, it should be black.",
+    "To make the output, create a diagonal from top-right to bottom-left using the non-black squares from the input in their respective order. Fill all other squares with black.",
+    "From the input row, you would make a diagonal line from the top right to the bottom left. Any colored cell in the input would become a colored cell in the output positioned on this diagonal. Finally, each instance of colored cell is shifted one cell to the right on each successive row in the output."
+  ]
+}
