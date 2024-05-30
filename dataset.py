@@ -118,9 +118,10 @@ def get_larc_dataset():
 
 def get_arc1d_dataset():
     cache_path = cfg.arc1d_cache_path
-    if os.path.exists(cache_path) and False:
+    if os.path.exists(cache_path):
         with open(cache_path, 'rb') as f:
             tasks = pickle.load(f)
+        return tasks
     else:
         data_path = cfg.arc1d_dataset_path
         mapping_path = os.path.join(data_path, 'mapping.json')
